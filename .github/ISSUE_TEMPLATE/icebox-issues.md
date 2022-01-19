@@ -8,7 +8,8 @@ assignees: ''
 ---
 
 **User Story:**
+As a... GatorGradle user, I want to...
 *[TODO: Detail user story from consumer perspective...]*
 
-**Proposed Implementation:**
+**Proposed Plan:**
 *[TODO: Elaborate on potential implementations, likely without further research...]*
