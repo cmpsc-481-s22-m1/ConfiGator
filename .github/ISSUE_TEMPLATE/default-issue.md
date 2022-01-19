@@ -9,10 +9,10 @@ assignees: ''
 
 **User Story**:
 As a... GatorGradle user, I want to...
-*[Detail user story here...]*
+*[TODO: Detail user story here...]*
 
 **Implementation Plans**:
-*[Provide brief explanation for implementation plans here...]*
+*[TODO: Provide brief explanation for implementation plans here...]*
 
 **Relevant Resources**:
-*[Insert relevant resources or references here...]*
+*[TODO: Insert relevant resources or references here...]*
