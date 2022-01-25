@@ -2,7 +2,7 @@
 
 import pytest
 
-from hello import say_hello
+from configator import say_hello
 
 
 @pytest.mark.parametrize(

@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "project-template"
+name = "ConfiGator"
 version = "0.1.0"
 description = "Simple Python project template"
-authors = [""]
+authors = ["Adam Shinomiya <shinomiyaa@allegheny.edu>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
@@ -15,8 +15,8 @@ pytest-cov = "^3.0.0"
 pylint = "^2.12.2"
 
 [tool.taskipy.tasks]
-test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=hello tests/"
-lint = "pylint hello/ tests/"
+test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=configator tests/"
+lint = "pylint configator/ tests/"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
