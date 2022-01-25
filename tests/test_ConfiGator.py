@@ -1,20 +1,26 @@
-"""This module tests the hello.say_hello module."""
+"""This module tests the ConfiGator module."""
 
 import pytest
 
-from hello import say_hello
+from ConfiGator import generate
 
+def test_create_gatorbuild_generates_file_named_build_gradle(mocker):
+    mock_open = mocker.mock_open()
+    #take in buildin open function and replace with mock function
+    mocker.patch('builtins.open', mock_open)
+    generate.create_gradlebuild()
+    mock_open.assert_called_once_with("build.gradle","w")
 
-@pytest.mark.parametrize(
-    "name,expected",
-    [
-        ("World", "Hello, World!\n"),
-        ("Maria", "Hello, Maria!\n"),
-        ("Saejin", "Hello, Saejin!\n"),
-    ],
-)
-def test_greet(capsys, name, expected):
-    """Check that greet() prints the correct message."""
-    say_hello.greet(name)
-    captured = capsys.readouterr()
-    assert captured.out == expected
+def test_create_gatorgrader_writes_fastfail(mocker):
+    mock_open = mocker.mock_open()
+    mocker.patch('builtins.open', mock_open)
+    generate.create_gradlebuild()
+    assert "gatorgradle" in mock_open().write.call_args.args[0]
+
+#write unit testing, which is expected in this project. invoke each part of the program
+# invoke create_gradlebuild Function
+#open function and write function was used to generate this file
+#with right parameters it should pass test by generating correct file through open
+#did you pass the right parameter? (check it)
+#did you pass build.gradle in open function? (confident build.gradle was created)
+#write function, if gradle build (the right string) was passed into the function

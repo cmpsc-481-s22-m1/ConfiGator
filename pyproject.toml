@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "project-template"
+name = "ConfiGator"
 version = "0.1.0"
-description = "Simple Python project template"
-authors = [""]
+description = "A Configuration File Generator for GatorGradle"
+authors = ["Kevin Lee"]
 license = "MIT"
 
 [tool.poetry.dependencies]
@@ -13,11 +13,11 @@ taskipy = "^1.9.0"
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
 pylint = "^2.12.2"
-mock = "^4.0.3"
+pytest-mock = "^3.6.1"
 
 [tool.taskipy.tasks]
-test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=hello tests/"
-lint = "pylint hello/ tests/"
+test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=ConfiGator tests/"
+lint = "pylint ConfiGator/ tests/"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
