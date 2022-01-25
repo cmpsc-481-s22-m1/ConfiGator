@@ -12,7 +12,6 @@ that can be read and written to
 """
 def create_gradlebuild():
 
-    os.mkdir(directory)
     gradlebuild = """
     plugins {
        id "org.gatored.gatorgradle" version "0.5.1"
