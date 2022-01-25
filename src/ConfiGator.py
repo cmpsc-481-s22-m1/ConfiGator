@@ -19,6 +19,7 @@ that can be read and written to
 os.mkdir(directory, mode = 0o666)
 print("Directory '% s' is built!" % directory)
 
+@cli.command()
 def cli(
     fastfail: bool = typer.Option(False)
 ):
