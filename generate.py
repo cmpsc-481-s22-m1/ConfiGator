@@ -7,16 +7,22 @@ print("Let's work on getting your configuration files generated!")
 
 cli = typer.Typer()
 
-# directory
-directory = "C:/config"
+# Parent Directories
+parent_dir = "config"
 
-"""
-creating directory that can have files
-that can be read and written to
-"""
+# Path
+path = os.path.join(parent_dir)
 
-os.mkdir(directory, mode = 0o666)
-print("Directory '% s' is built!" % directory)
+# Create the directory
+os.makedirs(path)
+
+# mode
+mode = 0o666
+
+#path = os.path.join(parent_dir, directory)
+
+os.makedirs(path, mode)
+print("Directory '% s' created" % parent_dir)
 
 def cli(
     gatorgrader: bool = typer.Option(False)
