@@ -22,7 +22,6 @@ print("Directory '% s' is built!" % directory)
 def cli(
     fastfail: bool = typer.Option(False)
 ):
-    # print(f"Fastfail: {fastfail}")
     
     """"
     Generating and writing
@@ -30,6 +29,7 @@ def cli(
     """
 
     f = open("C:/config/gatorgrader.yml", "w")
+    f.write("""# Should a check failure immediately "break" the Gradle run?\n""")
     f.write(f"fastfail: {fastfail}")
     f.close()
 
