@@ -7,7 +7,7 @@ import os
 print("Let's work on getting your build.gradle file generated!")
 
 """
-creating directory that can have files
+creating a file with gatorgradle version
 that can be read and written to
 """
 def create_gradlebuild():
