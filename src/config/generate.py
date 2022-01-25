@@ -18,7 +18,7 @@ creating directory that can have files
 that can be read and written to
 """
 
-os.mkdir(directory, mode = 0o666)
+os.mkdir(directory, mode = 0o766)
 print("Directory '% s' is built!" % directory)
 
 def cli(
