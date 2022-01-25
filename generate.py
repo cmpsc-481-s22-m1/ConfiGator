@@ -19,7 +19,7 @@ os.mkdir(directory, mode = 0o666)
 print("Directory '% s' is built!" % directory)
 
 def cli(
-    fastfail: bool = typer.Option(False)
+    gatorgrader: bool = typer.Option(False)
 ):
 
     """"
