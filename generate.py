@@ -7,33 +7,30 @@ print("Let's work on getting your configuration files generated!")
 
 cli = typer.Typer()
 
-# Parent Directories
-parent_dir = "config"
+# directory
+directory = "config"
 
 # Path
-path = os.path.join(parent_dir)
+path = os.path.join(directory)
 
-# Create the directory
-os.makedirs(path)
 
-# mode
-mode = 0o666
+"""
+creating directory that can have files
+that can be read and written to
+"""
 
-#path = os.path.join(parent_dir, directory)
-
-os.makedirs(path, mode)
-print("Directory '% s' created" % parent_dir)
+os.mkdir(directory, mode = 0o666)
+print("Directory '% s' is built!" % directory)
 
 def cli(
     gatorgrader: bool = typer.Option(False)
 ):
 
-    """"
-    Generating and writing
-    to the gatorgrader.yml file
-    """
+    print(f"gatorgrader: {gatorgrader}")
 
-    f = open("C:/config/gatorgrader.yml", "w")
+    """"Generating the gatorgrader.yml file"""
+
+    f = open("config/gatorgrader.yml", "w")
     f.write("--- \n")
     f.write("# The name of your assignment\n")
     f.write("""# Should a check failure "break" the Gradle run?\n""")
@@ -65,7 +62,7 @@ def cli(
 ):
     print(f"Gradlebuild: {Gradlebuild}")
 
-    """"Generating the gatorgrader.yml file"""
+    """"Generating the gradle.build file"""
 
     f = open("gradle.build", "w")
     f.write("plugins { \n")
@@ -81,7 +78,7 @@ def cli(
 ):
     print(f"Main: {Main}")
 
-    """"Generating the gatorgrader.yml file"""
+    """"Generating the main.py file"""
 
     f = open("main.py", "w")
     f.write("name: Grade")
