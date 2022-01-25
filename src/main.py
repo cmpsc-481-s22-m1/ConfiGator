@@ -8,7 +8,11 @@ print("Let's work on getting your configuration files generated!")
 cli = typer.Typer()
 
 # directory
-directory = "C:/config"
+directory = "config"
+
+# Path
+path = os.path.join(directory)
+
 
 """
 creating directory that can have files 
@@ -26,7 +30,7 @@ def cli(
     
     """"Generating the gatorgrader.yml file"""
 
-    f = open("C:/config/gatorgrader.yml", "w")
+    f = open("config/gatorgrader.yml", "w")
     f.write("""# Implementing indentation for Gradle run\n""")
     f.write("indentation: 2")
     f.close()
