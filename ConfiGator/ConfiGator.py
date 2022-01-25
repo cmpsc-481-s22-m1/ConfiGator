@@ -1,4 +1,4 @@
-""""Command-line interface to receive input to create configuration files"""
+""""Program to automatically generate gatorgrader.yml files in a config directory"""
 
 # import necessary libraries
 import os
