@@ -1,3 +1,5 @@
+""""Command-line interface to receive input to create configuration files"""
+
 import typer
 
 def cli(
