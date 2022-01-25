@@ -10,7 +10,7 @@ print("Let's work on getting your build.gradle file generated!")
 creating directory that can have files
 that can be read and written to
 """
-def create_gatorgrader():
+def create_gradlebuild():
     # directory
     directory = "ConfiGator"
 
