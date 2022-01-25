@@ -11,8 +11,6 @@ creating directory that can have files
 that can be read and written to
 """
 def create_gradlebuild():
-    # directory
-    directory = "ConfiGator"
 
     os.mkdir(directory)
     gradlebuild = """
