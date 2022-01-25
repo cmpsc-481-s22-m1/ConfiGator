@@ -13,7 +13,6 @@ directory = "config"
 # Path
 path = os.path.join(directory)
 
-
 """
 creating directory that can have files
 that can be read and written to
@@ -80,7 +79,7 @@ def cli(
 
     """"Generating the main.py file"""
 
-    f = open("main.py", "w")
+    f = open(".github/workflows/main.py", "w")
     f.write("name: Grade")
     f.write("on: [push, pull_request]\n")
     f.write("\n")
