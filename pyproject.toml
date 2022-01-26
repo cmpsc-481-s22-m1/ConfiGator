@@ -2,11 +2,12 @@
 name = "ConfiGator"
 version = "0.1.0"
 description = "A Configuration File Generator for GatorGradle"
-authors = ["Kai'lani Woodard"]
+authors = ["Kyrie Doniz", "Kevin Lee", "Kai'lani Woodard"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
+pytest-mock = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
 taskipy = "^1.9.0"
@@ -16,8 +17,8 @@ pylint = "^2.12.2"
 pytest-mock = "^3.6.1"
 
 [tool.taskipy.tasks]
-test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=hello tests/"
-lint = "pylint hello/ tests/"
+test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=configator tests/"
+lint = "pylint configator/ tests/"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
