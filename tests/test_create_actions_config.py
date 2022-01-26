@@ -2,7 +2,7 @@
     
 import pytest
 
-from ruamel import yaml
+from configator import create_actions_config
 
 def test_create_configator_file_creates_github_actions(mocker):
     mock_open = mocker.mock_open()
