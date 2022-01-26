@@ -2,11 +2,12 @@
 name = "ConfiGator"
 version = "0.1.0"
 description = "A Configuration File Generator for GatorGradle"
-authors = ["Kyrie Doniz"]
+authors = ["Kyrie Doniz", "Kevin Lee", "Kai'lani Woodard"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
+pytest-mock = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
 taskipy = "^1.9.0"
