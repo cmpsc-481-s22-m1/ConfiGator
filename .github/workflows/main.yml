@@ -37,10 +37,10 @@ jobs:
       - name: Lint markdown
         uses: DavidAnson/markdownlint-cli2-action@v4
       - name: Check spelling
-        uses: zwaldowski/cspell-action@v1
-        with:
-          paths: "*.md"
-          config: .github/cspell.json
+        #uses: zwaldowski/cspell-action@v1
+        #with:
+          #paths: "*.md"
+          #config: .github/cspell.json
 
   test:
     name: Test
