@@ -1,5 +1,5 @@
 """Creates pa file that will allow GatorGradle to run through GitHub Actions"""
-from ruamel import yaml
+from ruamel
 
 def create_configator_file(config_file):
     """Creating a file that will allow GatorGradle to run through GitHub Actions"""
