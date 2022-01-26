@@ -2,9 +2,9 @@
 
 print("Generating default README...!")
 
-# method to generate README
-
 def create_readme():
+    """ method to generate README
+    """
     with open("../README.md", "w", encoding="utf8") as read_me:
         read_me.write("This is text.")
 
