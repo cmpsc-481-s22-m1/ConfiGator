@@ -36,11 +36,12 @@ jobs:
         run: poetry run task lint
       - name: Lint markdown
         uses: DavidAnson/markdownlint-cli2-action@v4
-      #- name: Check spelling
-        #uses: zwaldowski/cspell-action@v1
-        #with:
-          #paths: "*.md"
-          #config: .github/cspell.json
+      - name: Check spelling
+        uses: zwaldowski/cspell-action@v1
+        with:
+          paths: "*.md"
+          config: .github/cspell.json
+          words: [configator]
 
 
   test:
