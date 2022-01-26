@@ -5,11 +5,10 @@ import os
 
 print("Let's work on getting your configuration files generated!")
 
-"""
-creating directory that can have files 
-that can be read and written to
-"""
 def create_gatorgrader():
+    """creating directory that can have files
+    that can be read and written to.
+    """
     # directory
     directory = "config"
 
@@ -39,12 +38,13 @@ def create_gatorgrader():
     # A pure check runs directly as a shell command
     (pure) test 2 -eq 2
     """
-    f = open("config/gatorgrader.yml", "w")
-    f.write(gatorgrader_config)
-    f.close()
+    with open("config/gatorgrader.yml", "w", encoding="utf8") as generate:
+        generate.write(gatorgrader_config)
+        generate.close()
 
 
-#print("All the necessary configuration files have been created and placed into the '% s'" % directory)
+# print("All the necessary configuration files have been created
+# and placed into the '% s'" % directory)
 
-if __name__ == '__main__':
-    pass
+#if __name__ == '__main__':
+#    pass
