@@ -2,19 +2,19 @@
 
 import pytest
 
-from ConfiGator import generate
+from configator import generate_build_gradle
 
 def test_create_gatorbuild_generates_file_named_build_gradle(mocker):
     mock_open = mocker.mock_open()
     #take in buildin open function and replace with mock function
     mocker.patch('builtins.open', mock_open)
-    generate.create_gradlebuild()
+    generate_build_gradle.create_gradlebuild()
     mock_open.assert_called_once_with("build.gradle","w")
 
 def test_create_gatorgrader_writes_fastfail(mocker):
     mock_open = mocker.mock_open()
     mocker.patch('builtins.open', mock_open)
-    generate.create_gradlebuild()
+    generate_build_gradle.create_gradlebuild()
     assert "gatorgradle" in mock_open().write.call_args.args[0]
 
 #write unit testing, which is expected in this project. invoke each part of the program

@@ -16,8 +16,8 @@ pylint = "^2.12.2"
 pytest-mock = "^3.6.1"
 
 [tool.taskipy.tasks]
-test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=ConfiGator tests/"
-lint = "pylint ConfiGator/ tests/"
+test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=configator tests/"
+lint = "pylint configator/ tests/"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

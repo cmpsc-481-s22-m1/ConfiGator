@@ -20,6 +20,3 @@ plugins {
     f = open("build.gradle", "w")
     f.write(gradlebuild)
     f.close()
-
-if __name__ == '__main__':
-    create_gradlebuild()
