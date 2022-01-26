@@ -3,7 +3,7 @@
 import os
 import pytest
 
-from configator import create_gatorgradle_yml
+from ConfiGator import create_gatorgradle_yml
 
 """tests create_gatorgrader function, specifically
 the creation of the config file
