@@ -13,7 +13,6 @@
         "virtualenvs",
         "git",
         "gitignore",
-        "confi",
         "github"
     ],
     "ignorePaths": [
