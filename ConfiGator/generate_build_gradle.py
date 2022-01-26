@@ -1,8 +1,6 @@
 
 """"Function to generate a gradlebuild file"""
 
-# import necessary libraries
-
 print("Let's work on getting your build.gradle file generated!")
 
 def create_gradlebuild():
