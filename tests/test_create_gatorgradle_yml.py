@@ -35,7 +35,7 @@ def test_create_gatorgrader_opens_and_writes_to_file(mocker):
     mocker.patch('builtins.open', mock_open)
     mocker.patch('os.mkdir')
     create_gatorgradle_yml.create_gatorgrader()
-    assert "GatorGrader" in mock_open().write.call_args.args[0]
+    assert os.path.exists("/config/gatorgrader.yml")
 
 # check open is called with path
 # was the file created w the str break:true
