@@ -1,4 +1,4 @@
-"""This module tests the ConfiGator module."""
+"""This module tests the configator module."""
 
 import os
 
