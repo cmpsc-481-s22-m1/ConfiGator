@@ -5,7 +5,6 @@ print("Generating default README...!")
 # method to generate README
 def create_readme():
     with open("../README.md", "w", encoding="utf8") as read_me:
-    read_me.write("This is text.")
-    read_me.close()
+        read_me.write("This is text.")
 
 create_readme()
