@@ -1,4 +1,0 @@
-
-plugins {
-    id "org.gatored.gatorgradle" version "0.5.1"
-}
