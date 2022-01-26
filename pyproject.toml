@@ -2,7 +2,7 @@
 name = "ConfiGator"
 version = "0.1.0"
 description = "A Configuration File Generator for GatorGradle"
-authors = ["Kevin Lee"]
+authors = ["Kyrie Doniz", "Kevin Lee", "Kai'lani Woodard"]
 license = "MIT"
 
 [tool.poetry.dependencies]

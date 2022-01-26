@@ -1,6 +1,10 @@
-# project-team-3
+# ConfiGator: A Configuration File Generator for GatorGradle
 
-To run this program you will have to install poetry. Install
-poetry by running the command `poetry install` in develop directory.
+There will be text here.
 
-poetry run python configator/generate_build_gradle.py
+## How to run
+
+There will be text here.
+
+- and here
+- and here
