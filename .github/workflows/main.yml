@@ -41,7 +41,6 @@ jobs:
         with:
           paths: "*.md"
           config: .github/cspell.json
-          "words": ["configator"]
 
 
   test:
