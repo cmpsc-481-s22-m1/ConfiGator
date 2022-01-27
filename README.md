@@ -1,5 +1,5 @@
 ![Mr.ConfiGator himself](img/icon.png)
-# Configator
+# ConfiGator
 
 [![Lint and Test](https://github.com/cmpsc-481-s22-m1/ConfiGator/actions/workflows/main.yml/badge.svg?branch=release%2F0.1.0)](https://github.com/cmpsc-481-s22-m1/ConfiGator/actions/workflows/main.yml)
 
