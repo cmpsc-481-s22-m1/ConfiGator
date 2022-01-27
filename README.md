@@ -35,9 +35,14 @@ poetry run python configator.py
 
 ## Contributors
 
-Kyrié Doniz [donizk](https://github.com/donizk)
-Kevin Lee [Kevin487](https://github.com/Kevin487)
-Kai'lani Woodard [kailaniwoodard](https://github.com/kailaniwoodard)
-Adam Shinomiya [ashinomi](https://github.com/TheShiny1)
 Liam Connelly [connellyw](https://github.com/connellyw)
+
+Kyrié Doniz [donizk](https://github.com/donizk)
+
+Kevin Lee [Kevin487](https://github.com/Kevin487)
+
+Adam Shinomiya [ashinomi](https://github.com/TheShiny1)
+
 Peter Snipes [Peter-Snipes](https://github.com/Peter-Snipes)
+
+Kai'lani Woodard [kailaniwoodard](https://github.com/kailaniwoodard)
