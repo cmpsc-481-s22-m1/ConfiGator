@@ -23,12 +23,13 @@ def test_create_configator_file_creates_folder_structure(mocker):
     os.makedirs.assert_called_once_with(".github/workflows") # pylint: disable=E1101
 
 def test_create_create_configator_file_has_text_inside(mocker):
+    """ Testing to see if file is populated"""
     mock_open = mocker.mock_open()
     mocker.patch('builtins.open', mock_open)
     mocker.patch("os.makedirs")
     create_actions_config.create_configator_file()
     mock_open.assert_called_once_with(".github/workflows/grade.yml","w", encoding='utf-8')
-    file = open(".github/workflows/grade.yml", 'r')
+    file = ".github/workflows/grade.yml"
     expected = """
 name: Grade
 on: [push, pull_request]
@@ -41,5 +42,5 @@ grade:
     - name: Run GatorGradle
       uses: GatorEducator/gatorgradle-action@v1
 """
-    assert expected == file.read()
-
+    with open(file, 'r', encoding='utf-8') as create_file:
+        assert expected == file.read()
