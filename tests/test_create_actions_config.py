@@ -42,5 +42,5 @@ grade:
     - name: Run GatorGradle
       uses: GatorEducator/gatorgradle-action@v1
 """
-    with open(file, 'r', encoding='utf-8') as create_file:
+    with open(file, 'r', encoding='utf-8') as file:
         assert expected == file.read()
