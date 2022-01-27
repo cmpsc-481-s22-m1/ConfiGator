@@ -4,9 +4,8 @@ import os
 def create_configator_file(file):
     """Creating a file that will allow GatorGradle to run through GitHub Actions"""
     directory = ".github/workflows"
-    
     if not os.path.exists(directory):
-      os.makedirs(directory)
+        os.makedirs(directory)
 
     data = """name: Grade
 on: [push, pull_request]

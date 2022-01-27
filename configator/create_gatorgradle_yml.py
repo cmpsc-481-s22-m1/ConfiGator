@@ -3,8 +3,6 @@
 # import necessary libraries
 import os
 
-print("Let's work on getting your configuration files generated!")
-
 def create_gatorgrader():
     """creating directory that can have files
     that can be read and written to.
@@ -13,7 +11,7 @@ def create_gatorgrader():
     directory = "config"
 
     if not os.path.exists(directory):
-      os.makedirs(directory)
+        os.makedirs(directory)
 
     gatorgrader_config = """---
 # The name of your assignment
@@ -42,10 +40,6 @@ gatorgrader.yml:
     with open("config/gatorgrader.yml", "w", encoding="utf8") as generate:
         generate.write(gatorgrader_config)
         generate.close()
-
-
-# print("All the necessary configuration files have been created
-# and placed into the '% s'" % directory)
 
 if __name__ == '__main__':
     create_gatorgrader()
