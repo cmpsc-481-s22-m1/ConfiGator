@@ -2,7 +2,7 @@
 
 import os
 
-from configator import create_readme
+from configator import generate_readme
 
 def test_create_readme(mocker):
     """tests create_gatorgrader function, specifically
@@ -11,5 +11,5 @@ def test_create_readme(mocker):
     mock_open = mocker.mock_open()
     mocker.patch('builtins.open', mock_open)
     mocker.patch('os.mkdir')
-    create_gatorgradle_yml.create_gatorgrader()
+    generate_readme.create_readme()
     assert "This is text." in mock_open().write.call_args.args[0]

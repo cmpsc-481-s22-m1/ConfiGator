@@ -1,13 +1,14 @@
 """Creates pa file that will allow GatorGradle to run through GitHub Actions"""
 import os
 
-def create_configator_file():
+def create_configator_file(file):
     """Creating a file that will allow GatorGradle to run through GitHub Actions"""
-    direct = ".github/workflows"
-    os.makedirs(direct)
+    directory = ".github/workflows"
+    
+    if not os.path.exists(directory):
+      os.makedirs(directory)
 
-    data = """
-name: Grade
+    data = """name: Grade
 on: [push, pull_request]
 jobs:
 grade:
@@ -18,7 +19,9 @@ grade:
     - name: Run GatorGradle
       uses: GatorEducator/gatorgradle-action@v1
 """
-    file = ".github/workflows/grade.yml"
 
     with open(file, 'w', encoding='utf-8') as create_file:
         create_file.write(data)
+
+if __name__ == "__main__":
+    create_configator_file('../.github/workflows/grade.yml')
