@@ -5,9 +5,9 @@ A configuration file generator meant to be used with [GatorGradle](https://githu
 
 ## Overview
 
-ConfiGator is a tool to be used in hand with [GatorGradle](https://github.com/GatorEducator/gatorgradle)
-to generate configuration files for assignments that require GatorGradle. ConfiGator
-uses [Poetry](https://python-poetry.org/) for package and dependency management.
+ConfiGator is a tool to be used in hand with GatorGradle to generate configuration
+files for assignments that require GatorGradle. ConfiGator uses
+[Poetry](https://python-poetry.org/) for package and dependency management.
 
 ## Usage
 
@@ -47,7 +47,7 @@ Peter Snipes [(Peter-Snipes)](https://github.com/Peter-Snipes)
 
 Kai'lani Woodard [(kailaniwoodard)](https://github.com/kailaniwoodard)
 
-and special thanks to:
+### and special thanks to:
 
 Saejin Heinert [(Michionlion)](https://github.com/Michionlion)
 
