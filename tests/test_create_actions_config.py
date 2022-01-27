@@ -30,4 +30,3 @@ def test_create_create_configator_file_has_text_inside(mocker):
     create_actions_config.create_configator_file()
     mock_open.assert_called_once_with(".github/workflows/grade.yml","w", encoding='utf-8')
     assert "GatorEducator/gatorgradle-action@v1" in mock_open().write.call_args.args[0]
-
