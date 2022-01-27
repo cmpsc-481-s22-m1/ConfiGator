@@ -29,18 +29,5 @@ def test_create_create_configator_file_has_text_inside(mocker):
     mocker.patch("os.makedirs")
     create_actions_config.create_configator_file()
     mock_open.assert_called_once_with(".github/workflows/grade.yml","w", encoding='utf-8')
-    file = ".github/workflows/grade.yml"
-    expected = """
-name: Grade
-on: [push, pull_request]
-jobs:
-grade:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    - name: Run GatorGradle
-      uses: GatorEducator/gatorgradle-action@v1
-"""
-    with open(file, 'r', encoding='utf-8') as file:
-        assert expected == file.read()
+    assert "GatorEducator/gatorgradle-action@v1" in mock_open().write.call_args.args[0]
+
