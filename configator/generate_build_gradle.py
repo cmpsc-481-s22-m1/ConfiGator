@@ -19,5 +19,3 @@ plugins {
     with open("build.gradle", "w", encoding="utf8") as generate:
         #using write function with the variable gradlebuild
         generate.write(gradlebuild)
-        #closing the file after writing
-        generate.close()
