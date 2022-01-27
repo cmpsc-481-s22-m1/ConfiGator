@@ -11,7 +11,16 @@ uses [Poetry](https://python-poetry.org/) for package and dependency management.
 
 ## Usage
 
-Clone this project locally, navigate to the repository directory, and run the
+### Installing Python dependencies
+
+In order to install the dependencies of this project, run this command in your
+command line:
+
+```
+poetry install
+```
+
+After installing the dependencies, navigate to the repository directory, and run the
 following in your command line:
 
 ```
@@ -23,3 +32,12 @@ or alternatively, you can navigate to the `configator` directory and run it as s
 ```
 poetry run python configator.py
 ```
+
+## Contributors
+
+Kyrié Doniz [donizk](https://github.com/donizk)
+Kevin Lee [Kevin487](https://github.com/Kevin487)
+Kai'lani Woodard [kailaniwoodard](https://github.com/kailaniwoodard)
+Adam Shinomiya [ashinomi](https://github.com/TheShiny1)
+Liam Connelly [connellyw](https://github.com/connellyw)
+Peter Snipes [Peter-Snipes](https://github.com/Peter-Snipes)
