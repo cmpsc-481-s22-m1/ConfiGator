@@ -26,13 +26,7 @@ After installing the dependencies, navigate to the repository directory, and run
 following in your command line:
 
 ```
-poetry run python configator/configator.py
-```
-
-or alternatively, you can navigate to the `configator` directory and run it as so:
-
-```
-poetry run python configator.py
+poetry run python main.py
 ```
 
 ## Contributors
