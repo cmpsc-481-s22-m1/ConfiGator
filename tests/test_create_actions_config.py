@@ -22,17 +22,24 @@ def test_create_configator_file_creates_folder_structure(mocker):
     create_actions_config.create_configator_file()
     os.makedirs.assert_called_once_with(".github/workflows") # pylint: disable=E1101
 
-#def test_create_create_configator_file_has_text_inside(mocker):
-    #mock_open = mocker.mock_open()
-    #mocker.patch('builtins.open', mock_open)
-    #create_actions_config.create_configator_file()
-    #os.mkdir.assert_called_once_with(".github/workflows/grade.yml")
+def test_create_create_configator_file_has_text_inside(mocker):
+    mock_open = mocker.mock_open()
+    mocker.patch('builtins.open', mock_open)
+    mocker.patch("os.makedirs")
+    create_actions_config.create_configator_file()
+    mock_open.assert_called_once_with(".github/workflows/grade.yml","w", encoding='utf-8')
+    file = open(".github/workflows/grade.yml", 'r')
+    expected = """
+name: Grade
+on: [push, pull_request]
+jobs:
+grade:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Run GatorGradle
+      uses: GatorEducator/gatorgradle-action@v1
+"""
+    assert expected == file.read()
 
-
-#write unit testing, which is expected in this project. invoke each part of the program
-# invoke create_configator Function
-#open function and write function was used to generate this file
-#with right parameters it should pass test by generating correct file through open
-#did you pass the right parameter? (check it)
-#did you pass build.gradle in open function? (confident build.gradle was created)
-#write function, if gradle build (the right string) was passed into the function
