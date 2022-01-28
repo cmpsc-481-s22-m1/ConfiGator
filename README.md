@@ -29,23 +29,3 @@ the following in your command line:
 ```bash
 poetry run python main.py
 ```
-
-## Contributors
-
-@connellyw
-
-@donizk
-
-@Kevin487
-
-@TheShiny1
-
-@Peter-Snipes
-
-@kailaniwoodard
-
-### Special thanks to
-
-@Michionlion
-
-@mariakimheinert
