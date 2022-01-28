@@ -1,5 +1,5 @@
-![Mr.ConfiGator himself](img/icon.png)
 # ConfiGator
+![Mr.ConfiGator himself](img/icon.png)
 
 [![Lint and Test](https://github.com/cmpsc-481-s22-m1/ConfiGator/actions/workflows/main.yml/badge.svg?branch=release%2F0.1.0)](https://github.com/cmpsc-481-s22-m1/ConfiGator/actions/workflows/main.yml)
 
@@ -18,14 +18,14 @@ files for assignments that require GatorGradle. ConfiGator uses
 In order to install the dependencies of this project, run this command in your
 command line:
 
-```
+```bash
 poetry install
 ```
 
 After installing the dependencies, navigate to the repository directory, and run the
 following in your command line:
 
-```
+```bash
 poetry run python main.py
 ```
 
