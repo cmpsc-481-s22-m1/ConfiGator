@@ -32,20 +32,20 @@ poetry run python main.py
 
 ## Contributors
 
-Liam Connelly [(connellyw)](https://github.com/connellyw)
+@connellyw
 
-Kyrié Doniz [(donizk)](https://github.com/donizk)
+@donizk
 
-Kevin Lee [(Kevin487)](https://github.com/Kevin487)
+@Kevin487
 
-Adam Shinomiya [(ashinomi)](https://github.com/TheShiny1)
+@TheShiny1
 
-Peter Snipes [(Peter-Snipes)](https://github.com/Peter-Snipes)
+@Peter-Snipes
 
-Kai'lani Woodard [(kailaniwoodard)](https://github.com/kailaniwoodard)
+@kailaniwoodard
 
 ### Special thanks to
 
-Saejin Heinert [(Michionlion)](https://github.com/Michionlion)
+@Michionlion
 
-Maria Kim Heinert [(mariakimheinert)](https://github.com/mariakimheinert)
+@mariakimheinert
