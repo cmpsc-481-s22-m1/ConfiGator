@@ -1,4 +1,5 @@
-![Mr.ConfiGator himself](img/icon.png)
+ ![Mr.ConfiGator himself](img/icon.png)
+
 # ConfiGator
 
 [![Lint and Test](https://github.com/cmpsc-481-s22-m1/ConfiGator/actions/workflows/main.yml/badge.svg?branch=release%2F0.1.0)](https://github.com/cmpsc-481-s22-m1/ConfiGator/actions/workflows/main.yml)
@@ -21,10 +22,8 @@ command line:
 ```
 poetry install
 ```
-
 After installing the dependencies, navigate to the repository directory, and run the
 following in your command line:
-
 ```
 poetry run python main.py
 ```
@@ -43,7 +42,7 @@ Peter Snipes [(Peter-Snipes)](https://github.com/Peter-Snipes)
 
 Kai'lani Woodard [(kailaniwoodard)](https://github.com/kailaniwoodard)
 
-### and special thanks to:
+### Special thanks to
 
 Saejin Heinert [(Michionlion)](https://github.com/Michionlion)
 
