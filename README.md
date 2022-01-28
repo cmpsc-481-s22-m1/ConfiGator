@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+![Mr.ConfiGator himself](img/icon.png)
+
+>>>>>>> 46838a274ea2ea6c89d9c2912adc90c5f517c2bf
 # ConfiGator
 ![Mr.ConfiGator himself](img/icon.png)
 
@@ -22,8 +27,8 @@ command line:
 poetry install
 ```
 
-After installing the dependencies, navigate to the repository directory, and run the
-following in your command line:
+After installing the dependencies, navigate to the repository directory, and run
+the following in your command line:
 
 ```bash
 poetry run python main.py
@@ -43,7 +48,7 @@ Peter Snipes [(Peter-Snipes)](https://github.com/Peter-Snipes)
 
 Kai'lani Woodard [(kailaniwoodard)](https://github.com/kailaniwoodard)
 
-### and special thanks to:
+### Special thanks to
 
 Saejin Heinert [(Michionlion)](https://github.com/Michionlion)
 

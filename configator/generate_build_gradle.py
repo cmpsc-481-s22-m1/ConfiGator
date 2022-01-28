@@ -1,8 +1,6 @@
 
 """"Function to generate a gradlebuild file"""
 
-print("Let's work on getting your build.gradle file generated!")
-
 def create_gradlebuild():
     """
     creating a file with gatorgradle version
@@ -19,5 +17,5 @@ plugins {
     with open("build.gradle", "w", encoding="utf8") as generate:
         #using write function with the variable gradlebuild
         generate.write(gradlebuild)
-        #closing the file after writing
-        generate.close()
+
+    print("Let's work on getting your build.gradle file generated!")
