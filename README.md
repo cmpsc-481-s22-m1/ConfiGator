@@ -1,4 +1,4 @@
- ![Mr.ConfiGator himself](img/icon.png)
+![Mr.ConfiGator himself](img/icon.png)
 
 # ConfiGator
 
@@ -23,11 +23,8 @@ command line:
 poetry install
 ```
 
-```
 After installing the dependencies, navigate to the repository directory, and run
 the following in your command line:
-
-```
 
 ```
 poetry run python main.py
