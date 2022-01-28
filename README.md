@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-![Mr.ConfiGator himself](img/icon.png)
-
->>>>>>> 46838a274ea2ea6c89d9c2912adc90c5f517c2bf
 # ConfiGator
 ![Mr.ConfiGator himself](img/icon.png)
 
