@@ -1,4 +1,4 @@
-"""This module tests the configator module."""
+"""This module tests the generate build gradle file."""
 
 from configator import generate_build_gradle
 
