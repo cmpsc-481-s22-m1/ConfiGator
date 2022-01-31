@@ -33,3 +33,5 @@ if __name__ == '__main__':
     # create_actions_config.create_configator_file()
     # create_gatorgradle_yml.create_gatorgrader()
     # generate_build_gradle.create_gradlebuild()
+
+# TODO: Create functions for validating input and ensuring the user is satisfied with their input
