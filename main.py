@@ -35,3 +35,5 @@ if __name__ == '__main__':
     # generate_build_gradle.create_gradlebuild()
 
 # TODO: Create functions for validating input and ensuring the user is satisfied with their input
+
+# TODO: Develop default values if the user does not want to input a value, after confirmation of course
