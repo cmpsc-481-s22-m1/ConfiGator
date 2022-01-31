@@ -6,6 +6,7 @@ from configator import create_gatorgradle_yml
 from configator import generate_build_gradle
  
 def main():
+    # TODO: Present user with a set of defaults on default run to reduce prompting
     """Gather input from the command line to fill config files."""
     typer.echo("")
     name = typer.prompt("What do you want to name your assignment?")
