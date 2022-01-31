@@ -3,8 +3,6 @@
 # import necessary libraries
 import os
 
-print("Let's work on getting your configuration files generated!")
-
 def create_gatorgrader():
     """creating directory that can have files
     that can be read and written to.
@@ -26,23 +24,12 @@ indent: 2
 # What version of GatorGrader should this assignment use?
 version: v1.1.0
 ---
-
-# A check inside these blocks runs on the "." directory against the "build.gradle" file
-config:
-gatorgrader.yml:
-    --description "Make a gatorgrader.yml file" ConfirmFileExists
-
-# A check without a surrounding block runs in the "." directory
---description "Have at least 7 commits" CountCommits --count 7
-
-# A pure check runs directly as a shell command
-(pure) test 2 -eq 2
 """
     with open("config/gatorgrader.yml", "w", encoding="utf8") as generate:
         generate.write(gatorgrader_config)
         generate.close()
 
-
+    print("Let's work on getting your configuration files generated!")
 # print("All the necessary configuration files have been created
 # and placed into the '% s'" % directory)
 
