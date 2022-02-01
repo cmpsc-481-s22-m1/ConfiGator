@@ -7,7 +7,7 @@ from configator import create_gatorgradle_yml
 from configator import generate_build_gradle
  
 def main(
-    name: str = typer.Option("new-assignment"),
+    name: str = typer.Argument("new-assignment"),
     brk: bool = typer.Option(True),
     fastfail: bool = typer.Option(False),
     indent: int = typer.Option(4),
