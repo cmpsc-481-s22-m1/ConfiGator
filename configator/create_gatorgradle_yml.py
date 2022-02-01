@@ -24,6 +24,8 @@ fastfail: false
 indent: 2
 # What version of GatorGrader should this assignment use?
 version: v1.1.0
+# Minimum commit requirement?
+commits: 3
 ---
 """
     with open("config/gatorgrader.yml", "w", encoding="utf8") as generate:
