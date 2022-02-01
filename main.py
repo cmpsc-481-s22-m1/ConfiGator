@@ -7,6 +7,7 @@ from configator import create_gatorgradle_yml
 from configator import generate_build_gradle
  
 def main(
+    # TODO: Reduce parameters here, sort of clunky
     name: str = typer.Argument("new-assignment"),
     brk: bool = typer.Option(True),
     fastfail: bool = typer.Option(False),
