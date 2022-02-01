@@ -12,8 +12,11 @@ def create_gatorgrader(name, brk, ff, ind, vers, com):
     # creating directory called config
     directory = "config"
 
-    os.mkdir(directory)
-    # if directory exists, error
+    if os.path.isdir(directory) == True:
+        pass
+    else:
+        os.mkdir(directory)
+    
     gatorgrader_config = f"""
 ---
 # The name of your assignment
@@ -30,9 +33,6 @@ version: {vers}
 commits: {com}
 ---
 """
-    with open("C:/kyrie/config/gatorgrader.yml", "w", encoding="utf8") as generate:
+    with open("config/gatorgrader.yml", "w", encoding="utf8") as generate:
         generate.write(gatorgrader_config)
         generate.close()
-
-#if __name__ == '__main__':
-#    pass
