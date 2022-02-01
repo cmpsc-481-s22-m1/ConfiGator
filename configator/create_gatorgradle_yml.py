@@ -3,7 +3,9 @@
 # import necessary libraries
 import os
 
-def create_gatorgrader():
+import main
+
+def create_gatorgrader(name, brk, ff, ind, vers, com):
     """creating directory that can have files
     that can be read and written to.
     """
@@ -12,23 +14,23 @@ def create_gatorgrader():
 
     os.mkdir(directory)
     # if directory exists, error
-    gatorgrader_config = """
+    gatorgrader_config = f"""
 ---
 # The name of your assignment
-name: simple-assignment
+name: {name}
 # Should a check failure "break" the Gradle run?
-break: true
+break: {brk}
 # Should a check failure immediately "break" the Gradle run?
-fastfail: false
+fastfail: {ff}
 # What level of indentation does the body of this file use?
-indent: 2
+indent: {ind}
 # What version of GatorGrader should this assignment use?
-version: v1.1.0
+version: {vers}
 # Minimum commit requirement?
-commits: 3
+commits: {com}
 ---
 """
-    with open("config/gatorgrader.yml", "w", encoding="utf8") as generate:
+    with open("C:/kyrie/config/gatorgrader.yml", "w", encoding="utf8") as generate:
         generate.write(gatorgrader_config)
         generate.close()
 
