@@ -11,6 +11,7 @@ def create_gatorgrader():
     directory = "config"
 
     os.mkdir(directory)
+    # if directory exists, error
     gatorgrader_config = """
 ---
 # The name of your assignment
@@ -28,10 +29,6 @@ version: v1.1.0
     with open("config/gatorgrader.yml", "w", encoding="utf8") as generate:
         generate.write(gatorgrader_config)
         generate.close()
-
-    print("Let's work on getting your configuration files generated!")
-# print("All the necessary configuration files have been created
-# and placed into the '% s'" % directory)
 
 #if __name__ == '__main__':
 #    pass
