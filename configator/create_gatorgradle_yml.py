@@ -3,6 +3,7 @@
 # import necessary libraries
 import os
 
+#pylint: disable=too-many-arguments
 def create_gatorgrader(name, brk, fastfail, ind, vers, com):
     """creating directory that can have files
     that can be read and written to.
