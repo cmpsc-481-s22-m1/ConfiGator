@@ -3,7 +3,7 @@
 # import necessary libraries
 import os
 
-def create_gatorgrader(name, brk, ff, ind, vers, com):
+def create_gatorgrader(name, brk, fastfail, ind, vers, com):
     """creating directory that can have files
     that can be read and written to.
     """
@@ -22,7 +22,7 @@ name: {name}
 # Should a check failure "break" the Gradle run?
 break: {brk}
 # Should a check failure immediately "break" the Gradle run?
-fastfail: {ff}
+fastfail: {fastfail}
 # What level of indentation does the body of this file use?
 indent: {ind}
 # What version of GatorGrader should this assignment use?

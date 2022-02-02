@@ -9,7 +9,7 @@ from configator import generate_build_gradle
 def main(
     name: str = typer.Option("configator-generated"),
     brk: str = typer.Option("true"),
-    ff: str = typer.Option("false"),
+    fastfail: str = typer.Option("false"),
     ind: int = typer.Option(2),
     vers: str = typer.Option("v1.1.0"),
     ggradleversion: str = typer.Option("0.5.1"),
