@@ -1,4 +1,4 @@
-"""This module tests the create gatorgradle"""
+"""This program will test the create gatorgradle yml file"""
 
 import os
 
