@@ -19,61 +19,80 @@ files for assignments that require GatorGradle. ConfiGator uses
 In order to install the dependencies of this project, run this command in your
 command line:
 
-```bash
+```
+bash
 poetry install
 ```
 
-```bash
+```
+bash
 poetry install typer
 ```
 
 After installing the dependencies, navigate to the repository directory, and run
 the following in your command line:
 
-```bash
+```
+bash
 poetry run python main.py
 ```
 
-### Commands to Change Specific Information Within a File:
+### Commands to Change Specific Information Within a File
 
 Command to change name
-```bash
+
+```
+bash
 poetry run python main.py --name {your name}
 ```
 
 Command to change break format
-```bash
+
+```
+bash
 poetry run python main.py --brk {false}
 ```
 
 Command to change fast fail
-```bash
+
+```
+bash
 poetry run python main.py --ff {true}
 ```
 
 Command to change indentation
-```bash
+
+```
+bash
 poetry run python main.py --ind {desired int}
 ```
 
 Command to change GatorGrader version
-```bash
+
+```
+bash
 poetry run python main.py --vers {desired version}
 ```
 
 Command to change GatorGradle
-```bash
+
+```
+bash
 poetry run python main.py --ggradleversion {desired version}
 ```
 
 Command to change commit requirements
-```bash
+
+```
+bash
 poetry run python main.py --com {desired int}
 ```
 
 ### Testing Program
 
 Command to test the coverage
-```bash
+
+```
+bash
 poetry run task test
 ```
