@@ -3,8 +3,6 @@
 # import necessary libraries
 import os
 
-import main
-
 def create_gatorgrader(name, brk, ff, ind, vers, com):
     """creating directory that can have files
     that can be read and written to.
@@ -16,7 +14,7 @@ def create_gatorgrader(name, brk, ff, ind, vers, com):
         pass
     else:
         os.mkdir(directory)
-    
+
     gatorgrader_config = f"""
 ---
 # The name of your assignment
