@@ -3,35 +3,35 @@
 # import necessary libraries
 import os
 
-#pylint: disable=too-many-arguments
-def create_gatorgrader(name, brk, fastfail, ind, vers, com):
+def create_gatorgrader():
     """creating directory that can have files
     that can be read and written to.
     """
     # creating directory called config
     directory = "config"
 
-    if os.path.isdir(directory) is True:
-        pass
-    else:
-        os.mkdir(directory)
-
-    gatorgrader_config = f"""
+    os.mkdir(directory)
+    gatorgrader_config = """
 ---
 # The name of your assignment
-name: {name}
+name: simple-assignment
 # Should a check failure "break" the Gradle run?
-break: {brk}
+break: true
 # Should a check failure immediately "break" the Gradle run?
-fastfail: {fastfail}
+fastfail: false
 # What level of indentation does the body of this file use?
-indent: {ind}
+indent: 2
 # What version of GatorGrader should this assignment use?
-version: {vers}
-# Minimum commit requirement?
-commits: {com}
+version: v1.1.0
 ---
 """
     with open("config/gatorgrader.yml", "w", encoding="utf8") as generate:
         generate.write(gatorgrader_config)
         generate.close()
+
+    print("Let's work on getting your configuration files generated!")
+# print("All the necessary configuration files have been created
+# and placed into the '% s'" % directory)
+
+#if __name__ == '__main__':
+#    pass
