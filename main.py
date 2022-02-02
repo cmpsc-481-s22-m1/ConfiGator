@@ -1,4 +1,4 @@
-"""This file will use all of our functions and run the progam"""
+"""The file will use all of our functions and run the progam"""
 
 import typer
 
