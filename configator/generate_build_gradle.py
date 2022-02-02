@@ -1,4 +1,3 @@
-
 """"Function to generate a gradlebuild file"""
 
 def create_gradlebuild(ggradleversion):
