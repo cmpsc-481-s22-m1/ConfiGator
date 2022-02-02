@@ -11,10 +11,11 @@ def test_create_gatorgrader_makes_config_directory(mocker):
     """
     mock_open = mocker.mock_open()
     mocker.patch('builtins.open', mock_open)
-    mocker.patch('os.mkdir')
+    #mocker.patch('os.mkdir')
     create_gatorgradle_yml.create_gatorgrader("configator-generated",
     "true", "false", 2, "v1.1.0", 3)
-    os.mkdir.assert_called_once_with('config')
+    #os.mkdir.assert_called_once_with('config')
+    mock_open.assert_called_once_with("config/gatorgrader.yml", "w", encoding="utf8")
 
 
 def test_create_gatorgrader_writes_fastfail(mocker):
