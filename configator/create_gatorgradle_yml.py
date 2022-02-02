@@ -3,9 +3,8 @@
 # import necessary libraries
 import os
 
-import main
-
-def create_gatorgrader(name, brk, ff, ind, vers, com):
+#pylint: disable=too-many-arguments
+def create_gatorgrader(name, brk, fastfail, ind, vers, com):
     """creating directory that can have files
     that can be read and written to.
     """
@@ -16,6 +15,7 @@ def create_gatorgrader(name, brk, ff, ind, vers, com):
         pass
     else:
         os.mkdir(directory)
+
     gatorgrader_config = f"""
 ---
 # The name of your assignment
@@ -23,7 +23,7 @@ name: {name}
 # Should a check failure "break" the Gradle run?
 break: {brk}
 # Should a check failure immediately "break" the Gradle run?
-fastfail: {ff}
+fastfail: {fastfail}
 # What level of indentation does the body of this file use?
 indent: {ind}
 # What version of GatorGrader should this assignment use?
