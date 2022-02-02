@@ -12,7 +12,7 @@ def test_create_gatorgrader_makes_config_directory(mocker):
     mock_open = mocker.mock_open()
     mocker.patch('builtins.open', mock_open)
     mocker.patch('os.mkdir')
-    create_gatorgradle_yml.create_gatorgrader()
+    create_gatorgradle_yml.create_gatorgrader(name, brk, ff, ind, vers, com)
     os.mkdir.assert_called_once_with('config')
 
 
@@ -23,5 +23,5 @@ def test_create_gatorgrader_writes_fastfail(mocker):
     mock_open = mocker.mock_open()
     mocker.patch('builtins.open', mock_open)
     mocker.patch('os.mkdir')
-    create_gatorgradle_yml.create_gatorgrader()
+    create_gatorgradle_yml.create_gatorgrader(name, brk, ff, ind, vers, com)
     assert "fastfail: false" in mock_open().write.call_args.args[0]
