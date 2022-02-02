@@ -16,7 +16,7 @@ def main(
     com: int = typer.Option(3)
 ):
     typer.echo(f"Generating assignment as: {name}")
-    create_gatorgradle_yml.create_gatorgrader(name, brk, ff, ind, vers, com)
+    create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, ind, vers, com)
     generate_build_gradle.create_gradlebuild(ggradleversion)
 
 if __name__ == '__main__':
