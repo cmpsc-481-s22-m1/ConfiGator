@@ -1,6 +1,6 @@
 """This program will test the create gatorgradle yml file"""
 
-import os
+#import os
 
 from configator import create_gatorgradle_yml
 
