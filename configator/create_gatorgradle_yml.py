@@ -10,7 +10,7 @@ def create_gatorgrader(name, brk, ff, ind, vers, com):
     # creating directory called config
     directory = "config"
 
-    if os.path.isdir(directory) == True:
+    if os.path.isdir(directory) is True:
         pass
     else:
         os.mkdir(directory)
