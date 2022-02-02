@@ -8,7 +8,7 @@ def test_create_gatorbuild_generates_file_named_build_gradle(mocker):
     #take in buildin open function and replace with mock function
     mocker.patch('builtins.open', mock_open)
     #using the function within generate_build_gradle.py
-    generate_build_gradle.create_gradlebuild()
+    generate_build_gradle.create_gradlebuild("1.2.3")
     mock_open.assert_called_once_with("build.gradle","w", encoding="utf8")
 
 def test_create_gradlebuild_writes_through_gradlebuild(mocker):
@@ -16,6 +16,7 @@ def test_create_gradlebuild_writes_through_gradlebuild(mocker):
     mock_open = mocker.mock_open()
     #take in buildin open function and replace with mock function
     mocker.patch('builtins.open', mock_open)
-    generate_build_gradle.create_gradlebuild()
+    generate_build_gradle.create_gradlebuild("1.2.3")
     #taking the string gatorgradle and seeing if it is present in the file
     assert "gatorgradle" in mock_open().write.call_args.args[0]
+    assert "1.2.3" in mock_open().write.call_args.args[0]
