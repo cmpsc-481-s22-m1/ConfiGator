@@ -3,9 +3,9 @@
 # The name of your assignment
 name: configator-generated
 # Should a check failure "break" the Gradle run?
-break: True
+break: true
 # Should a check failure immediately "break" the Gradle run?
-fastfail: False
+fastfail: false
 # What level of indentation does the body of this file use?
 indent: 2
 # What version of GatorGrader should this assignment use?
