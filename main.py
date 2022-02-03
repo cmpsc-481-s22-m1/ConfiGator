@@ -108,7 +108,17 @@ def main(arg: Optional[str] = typer.argument(None)):
     else:
         # Run config to enable changing defaults via .env file
         try:
+            config_run = True
             config()
+            while config_run:
+                answer = typer.prompt("Would you like to continue configuring defaults? (Y/N): ")
+                if answer == 'Y' or answer == 'N':
+                    if answer == 'Y':
+                        config()
+                    elif answer == 'N':
+                        break
+                else:
+                    answer = typer.prompt("Invalid input, please enter (Y/N):")
             # User message for run changes
             typer.echo(f"Run the program again to see your changes...")
         except:
