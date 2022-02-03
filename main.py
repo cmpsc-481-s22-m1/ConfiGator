@@ -43,26 +43,26 @@ def config():
     # Use if/elif logic because switch cases do not natively exist in Python
     if option == 1:
         selection = "generated file name"
-        name = typer.prompt(f"\nEnter desired default directory name: ")
+        name = typer.prompt(f"\nEnter desired default directory name")
     elif option == 2:
         selection = "runs stops on first error"
-        answer = typer.prompt(f"\nEnable (True) or disable (False) the run stopping upon first error: ")
+        answer = typer.prompt(f"\nEnable (True) or disable (False) the run stopping upon first error")
         brk = answer
     elif option == 3:
         selection = "fail upon first failed check"
-        fastfail = typer.prompt(f"\nEnable (True) or disable (False) fails upon first failed check: ")
+        fastfail = typer.prompt(f"\nEnable (True) or disable (False) fails upon first failed check")
     elif option == 4:
         selection = "indent"
-        indent = typer.prompt(f"\nSet desired indent: ")
+        indent = typer.prompt(f"\nSet desired indent")
     elif option == 5:
         selection = "version"
-        version = typer.prompt(f"\nEnter desired version (vX.X.X): ")
+        version = typer.prompt(f"\nEnter desired version (vX.X.X)")
     elif option == 6:
         selection = "GatorGradle version"
-        ggradleversion = typer.prompt(f"\nEnter desired GatorGradle version (X.X.X): ")
+        ggradleversion = typer.prompt(f"\nEnter desired GatorGradle version (X.X.X)")
     elif option == 7:
         selection == "commits minimum"
-        commits = typer.prompt(f"\nEnter default minimum commits value: ")
+        commits = typer.prompt(f"\nEnter default minimum commits value")
     # Simulated progress bar for visual appeal
     with typer.progressbar(range(100)) as progress:
             for value in progress:
