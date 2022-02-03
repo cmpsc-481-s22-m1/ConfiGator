@@ -1,5 +1,4 @@
 """This module tests the githubactions module"""
-
 from configator import create_actions_config
 
 
