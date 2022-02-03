@@ -1,11 +1,7 @@
 """This module tests the main file"""
 
-import typer
 from typer.testing import CliRunner
 from main import app
-
-#app = typer.Typer()
-#app.command()(main)
 
 runner = CliRunner()
 
