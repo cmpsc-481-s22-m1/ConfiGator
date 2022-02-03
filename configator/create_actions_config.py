@@ -4,7 +4,13 @@ import os
 def create_configator_file():
     """Creating a file that will allow GatorGradle to run through GitHub Actions"""
     direct = ".github/workflows"
-    os.makedirs(direct)
+
+    # if directory already exists, don't create directory
+    if os.path.isdir(direct) is True:
+      pass
+    else:
+      # create directories
+      os.makedirs(direct)
 
     data = """
 name: Grade
