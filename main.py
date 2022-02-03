@@ -14,6 +14,8 @@ from typing import Optional
 # TODO: Update String syntax for echo calls from "..." + var + "..." to "... {var}"
 # TODO: Cry over program testing drama
 
+app = typer.Typer()
+
 # Set defaults equal to values in .env file
 name = dc('NAME')
 brk = dc('BRK')
@@ -90,10 +92,10 @@ def rewrite_env(
     # Close .env file
     e.close()
 
-def main(arg: Optional[str] = typer.argument(None)):
+def main(arg: Optional[str] = typer.Argument(None)):
     if arg is None:
         # Added simulated progress bar
-        with typer.progressbar(range(100)) as progress
+        with typer.progressbar(range(100)) as progress:
             for value in progress:
                 time.sleep(0.01)
         # Modify files as intended
