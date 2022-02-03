@@ -15,5 +15,5 @@ def test_app(mocker):
     mock_open = mocker.mock_open()
     mocker.patch('builtins.open', mock_open)
     result = runner.invoke(app, ["--name", "test"])
-    assert "name: test" in mock_open().write.call_args.args[0]
+    assert "name: test" in mock_open().write.call_args_list[0].args[0]
     assert result.exit_code == 0
