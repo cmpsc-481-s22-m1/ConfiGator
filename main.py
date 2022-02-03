@@ -66,7 +66,7 @@ def config():
     # Run rewrite_env() function to rewrite the .env file with desired values
     rewrite_env(name, brk, fastfail, indent, version, ggradleversion, commits)
     # Print completion message to console upon value overwrite
-    typer.secho(f"You have successly changed the " + selection + " configuration...", fg.typer.colors.GREEN)
+    typer.secho(f"You have successly changed the " + selection + " configuration...", fg=typer.colors.GREEN)
 
 @app.command()
 def rewrite_env(
@@ -99,38 +99,29 @@ def main(arg: Optional[str] = typer.Argument(None)):
             for value in progress:
                 time.sleep(0.01)
         # Modify files as intended
-        try:
-            create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, indent, version, commits)
-        except:
-            typer.echo(f"Failed to generate gatorgradle.yml file!")
-        try:
-            generate_build_gradle.create_gradlebuild(ggradleversion)
-        except:
-            typer.echo(f"Failed to generate build.gradle file!")
+        create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, indent, version, commits)
+        generate_build_gradle.create_gradlebuild(ggradleversion)
     else:
         # Run config to enable changing defaults via .env file
-        try:
-            config_run = True
-            config()
-            # Add input validation for config()
-            while config_run:
-                # Prompt user for continuation of configuring defaults
-                answer = typer.prompt("Would you like to continue configuring defaults? (Y/N): ")
-                # if-else logic for user answer to ensure input validation
-                if answer == 'Y' or answer == 'N':
-                    # Case where answer is yes (Y) and config runs again
-                    if answer == 'Y':
-                        config()
-                    # Case where answer is no (N) and breaks while loop with config_run now equaling False
-                    elif answer == 'N':
-                        config_run = False
-                # Case where user inputs invalid answer
-                else:
-                    answer = typer.echo("\nInvalid input...")
-            # User message for run changes
-            typer.echo(f"Run the program again to see your changes...")
-        except:
-            typer.echo(f"Failed to configure program defaults!")
+        config_run = True
+        config()
+        # Add input validation for config()
+        while config_run:
+            # Prompt user for continuation of configuring defaults
+            answer = typer.prompt("Would you like to continue configuring defaults? (Y/N): ")
+            # if-else logic for user answer to ensure input validation
+            if answer == 'Y' or answer == 'N':
+                # Case where answer is yes (Y) and config runs again
+                if answer == 'Y':
+                    config()
+                # Case where answer is no (N) and breaks while loop with config_run now equaling False
+                elif answer == 'N':
+                    config_run = False
+            # Case where user inputs invalid answer
+            else:
+                answer = typer.echo("\nInvalid input...")
+        # User message for run changes
+        typer.echo(f"Run the program again to see your changes...")
 
 if __name__ == '__main__':
     typer.run(main)
