@@ -83,11 +83,11 @@ def rewrite_env(
 
 def main(arg: Optional[str] = typer.argument(None)):
     if arg is None:
-        pass
+        create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, indent, version, commits)
+        generate_build_gradle.create_gradlebuild(ggradleversion)
     else:
         config()
-    create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, indent, version, commits)
-    generate_build_gradle.create_gradlebuild(ggradleversion)
+        typer.echo("Run the program again to see your changes...")
 
 if __name__ == '__main__':
     typer.run(main)
