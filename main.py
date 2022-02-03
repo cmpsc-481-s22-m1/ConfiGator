@@ -70,7 +70,7 @@ def config():
     # Run rewrite_env() function to rewrite the .env file with desired values
     rewrite_env(name, brk, fastfail, indent, version, ggradleversion, commits)
     # Print completion message to console upon value overwrite
-    typer.secho(f"\nYou have successly changed the {selection} configuration...", fg = typer.colors.LIGHTGREEN_EX)
+    typer.secho(f"\nYou have successly changed the {selection} configuration...", fg = typer.colors.GREEN)
 
 @app.command()
 def rewrite_env(
