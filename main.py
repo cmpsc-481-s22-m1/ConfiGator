@@ -91,6 +91,7 @@ def rewrite_env(
         e.write(f"VERSION={version}\n")
         e.write(f"GGRADLEVERSION={ggradleversion}\n")
         e.write(f"COMMITS={commits}")
+        e.flush()
 
 def main(arg: Optional[str] = typer.Argument(None)):
     if arg is None:
