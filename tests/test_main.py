@@ -2,8 +2,7 @@
 
 import typer
 from typer.testing import CliRunner
-
-import main
+from main import main
 
 app = typer.Typer()
 app.command()(main)
