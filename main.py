@@ -97,13 +97,22 @@ def main(arg: Optional[str] = typer.argument(None)):
             for value in progress:
                 time.sleep(0.01)
         # Modify files as intended
-        create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, indent, version, commits)
-        generate_build_gradle.create_gradlebuild(ggradleversion)
+        try:
+            create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, indent, version, commits)
+        except:
+            typer.echo("Failed to generate gatorgradle.yml file!")
+        try:
+            generate_build_gradle.create_gradlebuild(ggradleversion)
+        except:
+            typer.echo("Failed to generate build.gradle file!")
     else:
         # Run config to enable changing defaults via .env file
-        config()
-        # User message for run changes
-        typer.echo(f"Run the program again to see your changes...")
+        try:
+            config()
+            # User message for run changes
+            typer.echo(f"Run the program again to see your changes...")
+        except:
+            typer.echo("Failed to configure program defaults!")
 
 if __name__ == '__main__':
     typer.run(main)
