@@ -9,9 +9,6 @@ from configator import generate_build_gradle
 from decouple import config as dc
 from typing import Optional
 
-# TODO: Check to see if needed packages are installed in pyproject.toml
-# TODO: Have team member test program because of Python version drama
-# TODO: Update String syntax for echo calls from "..." + var + "..." to "... {var}"
 # TODO: Cry over program testing drama
 
 app = typer.Typer()
@@ -31,15 +28,16 @@ def config():
     # Menu stating current default configurations
     typer.echo(f"Default Configurations")
     global name, brk, fastfail, indent, version, ggradleversion, commits
-    typer.echo(f"1. Generated directory name: " + name)
-    typer.echo(f"2. Run stops on first error: " + brk)
-    typer.echo(f"3. Fail upon first failed check: " + fastfail)
-    typer.echo(f"4. Indent: " + indent)
-    typer.echo(f"5. Version " + version)
-    typer.echo(f"6. GatorGradle Version: " + ggradleversion)
-    typer.echo(f"7. Commits: " + commits)
+    typer.echo(f"1. Generated directory name: {name}")
+    typer.echo(f"2. Run stops on first error: {brk}")
+    typer.echo(f"3. Fail upon first failed check: {fastfail}")
+    typer.echo(f"4. Indent: {indent}")
+    typer.echo(f"5. Version: {version}")
+    typer.echo(f"6. GatorGradle Version: {ggradleversion}")
+    typer.echo(f"7. Commits: {commits}")
     # Prompt the user for the value they want to modify
     option = int(typer.prompt(f"Enter the number of the configuration you would like to change: "))
+    # Initialize selection and answer as empty strings
     selection = ""
     answer = ""
     # Use if/elif logic because switch cases do not natively exist in Python
@@ -69,7 +67,7 @@ def config():
     typer.echo(brk)
     rewrite_env(name, brk, fastfail, indent, version, ggradleversion, commits)
     # Print completion message to console upon value overwrite
-    typer.echo(f"You have successly changed the " + selection + " configuration...")
+    typer.echo(f"You have successly changed the {selection} configuration...")
 
 @app.command()
 def rewrite_env(
