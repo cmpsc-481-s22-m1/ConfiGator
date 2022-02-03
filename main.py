@@ -83,7 +83,7 @@ def rewrite_env(
 ):
     """Modify defaults within the .env file"""
     # Open the .env file for content modification
-    with open('../env.txt', 'w') as e:
+    with open('.env', 'w') as e:
         # Write each value to the .env file
         e.write(f"NAME={n}\n")
         e.write(f"BRK={b}\n")
