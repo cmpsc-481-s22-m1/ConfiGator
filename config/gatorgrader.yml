@@ -1,0 +1,15 @@
+
+---
+# The name of your assignment
+name: configator-generated
+# Should a check failure "break" the Gradle run?
+break: True
+# Should a check failure immediately "break" the Gradle run?
+fastfail: False
+# What level of indentation does the body of this file use?
+indent: 2
+# What version of GatorGrader should this assignment use?
+version: v1.1.0
+# Minimum commit requirement?
+commits: 3
+---
