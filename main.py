@@ -1,11 +1,15 @@
 """The file will use all of our functions and run the progam"""
 
+import time
 import typer
 
 from configator import create_actions_config
 from configator import create_gatorgradle_yml
 from configator import generate_build_gradle
 from decouple import config as dc
+from typing import Optional
+
+# TODO: Check to see if needed packages are installed in pyproject.toml
 
 # Set defaults equal to values in .env file
 name = dc('NAME')
@@ -83,6 +87,11 @@ def rewrite_env(
 
 def main(arg: Optional[str] = typer.argument(None)):
     if arg is None:
+        # Added simulated progress bar
+        with typer.progressbar(range(100)) as progress
+            for value in progress:
+                time.sleep(0.01)
+        # Modify files as intended
         create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, indent, version, commits)
         generate_build_gradle.create_gradlebuild(ggradleversion)
     else:
