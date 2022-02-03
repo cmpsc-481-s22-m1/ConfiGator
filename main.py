@@ -8,6 +8,8 @@ from configator import create_actions_config
 from configator import create_gatorgradle_yml
 from configator import generate_build_gradle
 
+app = typer.Typer()
+@app.command()
 def main(
     name: str = typer.Option("configator-generated"),
     brk: str = typer.Option("true"),
@@ -31,4 +33,4 @@ def main(
     typer.secho(f"\nAssignment generation success!", fg = typer.colors.GREEN)
 
 if __name__ == '__main__':
-    typer.run(main)
+    app()
