@@ -1,132 +1,27 @@
-"""The file will use all of our functions and run the progam"""
+"""This file will use all of our functions and run the program"""
 
-import time
+# Import typer framework
 import typer
 
+# Import from configator
 from configator import create_actions_config
 from configator import create_gatorgradle_yml
 from configator import generate_build_gradle
-from decouple import config as dc
-from typing import Optional
 
-# TODO: Cry over program testing drama
-
-app = typer.Typer()
-
-# Set defaults equal to values in .env file
-name = dc('NAME')
-brk = dc('BRK')
-fastfail = dc('FASTFAIL')
-indent = dc('INDENT')
-version = dc('VERSION')
-ggradleversion = dc('GGRADLEVERSION')
-commits = dc('COMMITS')
-
-@app.command()
-def config():
-    """List default configurations and give the user the opportunity to modify defaults"""
-    # Menu stating current default configurations
-    typer.echo(f"Default Configurations")
-    global name, brk, fastfail, indent, version, ggradleversion, commits
-    typer.echo(f"1. Generated directory name: {name}")
-    typer.echo(f"2. Run stops on first error: {brk}")
-    typer.echo(f"3. Fail upon first failed check: {fastfail}")
-    typer.echo(f"4. Indent: {indent}")
-    typer.echo(f"5. Version: {version}")
-    typer.echo(f"6. GatorGradle Version: {ggradleversion}")
-    typer.echo(f"7. Commits: {commits}")
-    # Prompt the user for the value they want to modify
-    option = int(typer.prompt(f"\nEnter the number of the configuration you would like to change"))
-    # Initialize selection and answer as empty strings
-    selection = ""
-    answer = ""
-    # Use if/elif logic because switch cases do not natively exist in Python
-    if option == 1:
-        selection = "generated file name"
-        name = typer.prompt(f"\nEnter desired default directory name")
-    elif option == 2:
-        selection = "runs stops on first error"
-        answer = typer.prompt(f"\nEnable (True) or disable (False) the run stopping upon first error")
-        brk = answer
-    elif option == 3:
-        selection = "fail upon first failed check"
-        fastfail = typer.prompt(f"\nEnable (True) or disable (False) fails upon first failed check")
-    elif option == 4:
-        selection = "indent"
-        indent = typer.prompt(f"\nSet desired indent")
-    elif option == 5:
-        selection = "version"
-        version = typer.prompt(f"\nEnter desired version (vX.X.X)")
-    elif option == 6:
-        selection = "GatorGradle version"
-        ggradleversion = typer.prompt(f"\nEnter desired GatorGradle version (X.X.X)")
-    elif option == 7:
-        selection == "commits minimum"
-        commits = typer.prompt(f"\nEnter default minimum commits value")
-    # Simulated progress bar for visual appeal
-    with typer.progressbar(range(100)) as progress:
-            for value in progress:
-                time.sleep(0.01)
-    # Run rewrite_env() function to rewrite the .env file with desired values
-    rewrite_env(name, brk, fastfail, indent, version, ggradleversion, commits)
-    # Print completion message to console upon value overwrite
-    typer.secho(f"\nYou have successly changed the {selection} configuration...", fg = typer.colors.GREEN)
-
-@app.command()
-def rewrite_env(
-    n,
-    b,
-    ff,
-    i,
-    v,
-    gg,
-    c
+def main(
+    name: str = typer.Option("configator-generated"),
+    brk: str = typer.Option("true"),
+    fastfail: str = typer.Option("false"),
+    ind: int = typer.Option(2),
+    vers: str = typer.Option("v1.1.0"),
+    ggradleversion: str = typer.Option("0.5.1"),
+    com: int = typer.Option(3)
 ):
-    """Modify defaults within the .env file"""
-    # Open the .env file for content modification
-    with open('.env', 'w') as e:
-        # Write each value to the .env file
-        e.write(f"NAME={n}\n")
-        e.write(f"BRK={b}\n")
-        e.write(f"FASTFAIL={ff}\n")
-        e.write(f"INDENT={i}\n")
-        e.write(f"VERSION={v}\n")
-        e.write(f"GGRADLEVERSION={gg}\n")
-        e.write(f"COMMITS={c}")
-        e.flush()
-
-def main(arg: Optional[str] = typer.Argument(None)):
-    if arg is None:
-        # Added simulated progress bar
-        with typer.progressbar(range(100)) as progress:
-            for value in progress:
-                time.sleep(0.01)
-        # Modify files as intended
-        create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, indent, version, commits)
-        generate_build_gradle.create_gradlebuild(ggradleversion)
-        create_actions_config.create_configator_file()
-        typer.secho(f"\nGeneration success!", fg = typer.colors.GREEN)
-    else:
-        # Run config to enable changing defaults via .env file
-        config_run = True
-        config()
-        # Add input validation for config()
-        while config_run:
-            # Prompt user for continuation of configuring defaults
-            answer = typer.prompt("\nWould you like to continue configuring defaults? (Y/N): ")
-            # if-else logic for user answer to ensure input validation
-            if answer == 'Y' or answer == 'N':
-                # Case where answer is yes (Y) and config runs again
-                if answer == 'Y':
-                    config()
-                # Case where answer is no (N) and breaks while loop with config_run now equaling False
-                elif answer == 'N':
-                    config_run = False
-            # Case where user inputs invalid answer
-            else:
-                answer = typer.echo("\nInvalid input...")
-        # User message for run changes
-        typer.echo(f"\nRun the program again to see your changes...")
+    # Alert user of assignment generation under specified name
+    typer.echo(f"Generating assignment as: {name}")
+    create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, ind, vers, com)
+    generate_build_gradle.create_gradlebuild(ggradleversion)
+    create_actions_config.create_configator_file()
 
 if __name__ == '__main__':
     typer.run(main)
