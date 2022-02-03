@@ -41,13 +41,15 @@ def config():
     # Prompt the user for the value they want to modify
     option = int(typer.prompt(f"Enter the number of the configuration you would like to change: "))
     selection = ""
+    answer = ""
     # Use if/elif logic because switch cases do not natively exist in Python
     if option == 1:
         selection = "generated file name"
         name = typer.prompt(f"Enter desired default directory name: ")
     elif option == 2:
         selection = "runs stops on first error"
-        brk = typer.prompt(f"Enable (True) or disable (False) the run stopping upon first error: ")
+        answer = typer.prompt(f"Enable (True) or disable (False) the run stopping upon first error: ")
+        brk = answer
     elif option == 3:
         selection = "fail upon first failed check"
         fastfail = typer.prompt(f"Enable (True) or disable (False) fails upon first failed check: ")
