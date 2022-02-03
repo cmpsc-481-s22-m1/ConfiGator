@@ -36,38 +36,41 @@ def config():
     typer.echo(f"6. GatorGradle Version: {ggradleversion}")
     typer.echo(f"7. Commits: {commits}")
     # Prompt the user for the value they want to modify
-    option = int(typer.prompt(f"Enter the number of the configuration you would like to change: "))
+    option = int(typer.prompt(f"\nEnter the number of the configuration you would like to change"))
     # Initialize selection and answer as empty strings
     selection = ""
     answer = ""
     # Use if/elif logic because switch cases do not natively exist in Python
     if option == 1:
         selection = "generated file name"
-        name = typer.prompt(f"Enter desired default directory name: ")
+        name = typer.prompt(f"\nEnter desired default directory name: ")
     elif option == 2:
         selection = "runs stops on first error"
-        answer = typer.prompt(f"Enable (True) or disable (False) the run stopping upon first error: ")
+        answer = typer.prompt(f"\nEnable (True) or disable (False) the run stopping upon first error: ")
         brk = answer
     elif option == 3:
         selection = "fail upon first failed check"
-        fastfail = typer.prompt(f"Enable (True) or disable (False) fails upon first failed check: ")
+        fastfail = typer.prompt(f"\nEnable (True) or disable (False) fails upon first failed check: ")
     elif option == 4:
         selection = "indent"
-        indent = typer.prompt(f"Set desired indent: ")
+        indent = typer.prompt(f"\nSet desired indent: ")
     elif option == 5:
         selection = "version"
-        version = typer.prompt(f"Enter desired version (vX.X.X): ")
+        version = typer.prompt(f"\nEnter desired version (vX.X.X): ")
     elif option == 6:
         selection = "GatorGradle version"
-        ggradleversion = typer.prompt(f"Enter desired GatorGradle version (X.X.X): ")
+        ggradleversion = typer.prompt(f"\nEnter desired GatorGradle version (X.X.X): ")
     elif option == 7:
         selection == "commits minimum"
-        commits = typer.prompt(f"Enter default minimum commits value: ")
+        commits = typer.prompt(f"\nEnter default minimum commits value: ")
+    # Simulated progress bar for visual appeal
+    with typer.progressbar(range(100)) as progress:
+            for value in progress:
+                time.sleep(0.01)
     # Run rewrite_env() function to rewrite the .env file with desired values
-    typer.echo(brk)
     rewrite_env(name, brk, fastfail, indent, version, ggradleversion, commits)
     # Print completion message to console upon value overwrite
-    typer.echo(f"You have successly changed the {selection} configuration...")
+    typer.echo(f"\nYou have successly changed the {selection} configuration...")
 
 @app.command()
 def rewrite_env(
@@ -109,7 +112,7 @@ def main(arg: Optional[str] = typer.Argument(None)):
         # Add input validation for config()
         while config_run:
             # Prompt user for continuation of configuring defaults
-            answer = typer.prompt("Would you like to continue configuring defaults? (Y/N): ")
+            answer = typer.prompt("\nWould you like to continue configuring defaults? (Y/N): ")
             # if-else logic for user answer to ensure input validation
             if answer == 'Y' or answer == 'N':
                 # Case where answer is yes (Y) and config runs again
@@ -122,7 +125,7 @@ def main(arg: Optional[str] = typer.Argument(None)):
             else:
                 answer = typer.echo("\nInvalid input...")
         # User message for run changes
-        typer.echo(f"Run the program again to see your changes...")
+        typer.echo(f"\nRun the program again to see your changes...")
 
 if __name__ == '__main__':
     typer.run(main)
