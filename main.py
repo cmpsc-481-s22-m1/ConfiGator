@@ -39,7 +39,7 @@ def config():
     typer.echo(f"6. GatorGradle Version: " + ggradleversion)
     typer.echo(f"7. Commits: " + commits)
     # Prompt the user for the value they want to modify
-    option = typer.prompt(f"Enter the number of the configuration you would like to change: ")
+    option = int(typer.prompt(f"Enter the number of the configuration you would like to change: "))
     selection = ""
     # Use if/elif logic because switch cases do not natively exist in Python
     if option == 1:
