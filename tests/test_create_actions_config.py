@@ -1,6 +1,4 @@
 """This module tests the githubactions module"""
-import os
-
 from configator import create_actions_config
 
 
