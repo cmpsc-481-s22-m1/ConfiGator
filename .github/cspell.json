@@ -14,7 +14,10 @@
         "git",
         "gitignore",
         "github",
-        "configator"
+        "configator",
+        "ggradleversion",
+        "typer"
+
     ],
     "ignorePaths": [
         ".github/**",
