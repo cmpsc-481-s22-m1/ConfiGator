@@ -12,16 +12,8 @@ runner = CliRunner()
 
 
 def test_app(mocker):
-    result = runner.invoke(app, [ "main"])
-    assert result.exit_code == 0
+    """This module tests the main file for expected values being generated"""
     mock_open = mocker.mock_open()
-    #take in buildin open function and replace with mock function
-    mocker.patch('builtins.open', mock_open)
-    main.main()
-    assert "configator-generated" in mock_open().write.call_args.args[0]
-    assert "true" in mock_open().write.call_args.args[0]
-    assert "false" in mock_open().write.call_args.args[0]
-    assert "2" in mock_open().write.call_args.args[0]
-    assert "v1.1.0" in mock_open().write.call_args.args[0]
-    assert "0.5.1" in mock_open().write.call_args.args[0]
-    assert "3" in mock_open().write.call_args.args[0]
+    result = runner.invoke(app, ["--name", "test"])
+    mock_open.assert_called_once_with("../test", "w", encoding="utf8")
+    assert result.exit_code == 0
