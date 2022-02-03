@@ -105,6 +105,7 @@ def main(arg: Optional[str] = typer.Argument(None)):
         create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, indent, version, commits)
         generate_build_gradle.create_gradlebuild(ggradleversion)
         create_actions_config.create_configator_file()
+        typer.secho(f"\nGeneration success!", fg = typer.colors.GREEN)
     else:
         # Run config to enable changing defaults via .env file
         config_run = True
