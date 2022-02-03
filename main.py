@@ -40,7 +40,7 @@ def config():
     typer.echo(f"7. Commits: " + commits)
     # Prompt the user for the value they want to modify
     option = typer.prompt(f"Enter the number of the configuration you would like to change: ")
-    selection = None
+    selection = ""
     # Use if/elif logic because switch cases do not natively exist in Python
     if option == 1:
         selection = "generated file name"
