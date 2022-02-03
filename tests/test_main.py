@@ -38,7 +38,7 @@ def test_indent_option_updates_indentation(mocker):
     assert "indent: 1" in mock_open().write.call_args_list[0].args[0]
     assert result.exit_code == 0
 
-def test_name_option_updates_assignmentname(mocker):
+def test_vers_option_updates_version(mocker):
     """This module tests the main file for expected values being generated"""
     mock_open = mocker.mock_open()
     mocker.patch('builtins.open', mock_open)
@@ -54,7 +54,7 @@ def test_ggradleversion_option_changes_version(mocker):
     assert "0.6.0" in mock_open().write.call_args_list[1].args[0]
     assert result.exit_code == 0
 
-def test_name_option_updates_assignmentname(mocker):
+def test_com_option_updates_commits(mocker):
     """This module tests the main file for expected values being generated"""
     mock_open = mocker.mock_open()
     mocker.patch('builtins.open', mock_open)

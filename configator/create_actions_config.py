@@ -7,10 +7,10 @@ def create_configator_file():
 
     # if directory already exists, don't create directory
     if os.path.isdir(direct) is True:
-      pass
+        pass
     else:
       # create directories
-      os.makedirs(direct)
+        os.makedirs(direct)
 
     data = """
 name: Grade
