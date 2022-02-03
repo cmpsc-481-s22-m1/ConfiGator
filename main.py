@@ -10,6 +10,7 @@ from decouple import config as dc
 from typing import Optional
 
 # TODO: Check to see if needed packages are installed in pyproject.toml
+# TODO: Have team member test program because of Python version drama
 
 # Set defaults equal to values in .env file
 name = dc('NAME')
