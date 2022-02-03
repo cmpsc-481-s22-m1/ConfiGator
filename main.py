@@ -12,6 +12,7 @@ from typing import Optional
 # TODO: Check to see if needed packages are installed in pyproject.toml
 # TODO: Have team member test program because of Python version drama
 # TODO: Update String syntax for echo calls from "..." + var + "..." to "... {var}"
+# TODO: Cry over program testing drama
 
 # Set defaults equal to values in .env file
 name = dc('NAME')
@@ -24,6 +25,7 @@ commits = dc('COMMITS')
 
 @app.command()
 def config():
+    """List default configurations and give the user the opportunity to modify defaults"""
     # Menu stating current default configurations
     typer.echo(f"Default Configurations")
     global name, brk, fastfail, indent, version, ggradleversion, commits
@@ -74,7 +76,8 @@ def rewrite_env(
     ggradleversion,
     commits
 ):
-    # Open the .env file for modifications
+    """Modify defaults within the .env file"""
+    # Open the .env file for content modification
     e = open(f"../.env", "w")
     # Write each value to the .env file
     e.write(f"NAME=" + name + "\n")
@@ -97,7 +100,9 @@ def main(arg: Optional[str] = typer.argument(None)):
         create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, indent, version, commits)
         generate_build_gradle.create_gradlebuild(ggradleversion)
     else:
+        # Run config to enable changing defaults via .env file
         config()
+        # User message for run changes
         typer.echo(f"Run the program again to see your changes...")
 
 if __name__ == '__main__':
