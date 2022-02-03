@@ -82,15 +82,15 @@ def rewrite_env(
 ):
     """Modify defaults within the .env file"""
     # Open the .env file for content modification
-    e = open('../.env', 'w')
-    # Write each value to the .env file
-    e.write(f"NAME={name}\n")
-    e.write(f"BRK={brk}\n")
-    e.write(f"FASTFAIL={fastfail}\n")
-    e.write(f"INDENT={indent}\n")
-    e.write(f"VERSION={version}\n")
-    e.write(f"GGRADLEVERSION={ggradleversion}\n")
-    e.write(f"COMMITS={commits}")
+    with open('../.env', 'w') as e:
+        # Write each value to the .env file
+        e.write(f"NAME={name}\n")
+        e.write(f"BRK={brk}\n")
+        e.write(f"FASTFAIL={fastfail}\n")
+        e.write(f"INDENT={indent}\n")
+        e.write(f"VERSION={version}\n")
+        e.write(f"GGRADLEVERSION={ggradleversion}\n")
+        e.write(f"COMMITS={commits}")
     # Close .env file
     e.close()
 
