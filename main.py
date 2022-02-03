@@ -11,6 +11,7 @@ from typing import Optional
 
 # TODO: Check to see if needed packages are installed in pyproject.toml
 # TODO: Have team member test program because of Python version drama
+# TODO: Update String syntax for echo calls from "..." + var + "..." to "... {var}"
 
 # Set defaults equal to values in .env file
 name = dc('NAME')
@@ -61,7 +62,7 @@ def config():
     # Run rewrite_env() function to rewrite the .env file with desired values
     rewrite_env(name, brk, fastfail, indent, version, ggradleversion, commits)
     # Print completion message to console upon value overwrite
-    typer.echo(f"You have successly changed the " + selection + " configuration...")
+    typer.secho(f"You have successly changed the " + selection + " configuration...", fg.typer.colors.GREEN)
 
 @app.command()
 def rewrite_env(
@@ -97,7 +98,7 @@ def main(arg: Optional[str] = typer.argument(None)):
         generate_build_gradle.create_gradlebuild(ggradleversion)
     else:
         config()
-        typer.echo("Run the program again to see your changes...")
+        typer.echo(f"Run the program again to see your changes...")
 
 if __name__ == '__main__':
     typer.run(main)
