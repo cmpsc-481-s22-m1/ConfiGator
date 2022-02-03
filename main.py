@@ -110,15 +110,21 @@ def main(arg: Optional[str] = typer.argument(None)):
         try:
             config_run = True
             config()
+            # Add input validation for config()
             while config_run:
+                # Prompt user for continuation of configuring defaults
                 answer = typer.prompt("Would you like to continue configuring defaults? (Y/N): ")
+                # if-else logic for user answer to ensure input validation
                 if answer == 'Y' or answer == 'N':
+                    # Case where answer is yes (Y) and config runs again
                     if answer == 'Y':
                         config()
+                    # Case where answer is no (N) and breaks while loop with config_run now equaling False
                     elif answer == 'N':
-                        break
+                        config_run = False
+                # Case where user inputs invalid answer
                 else:
-                    answer = typer.prompt("Invalid input, please enter (Y/N):")
+                    answer = typer.echo("\nInvalid input...")
             # User message for run changes
             typer.echo(f"Run the program again to see your changes...")
         except:
