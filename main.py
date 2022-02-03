@@ -73,25 +73,25 @@ def config():
 
 @app.command()
 def rewrite_env(
-    name,
-    brk,
-    fastfail,
-    indent,
-    version,
-    ggradleversion,
-    commits
+    n,
+    b,
+    ff,
+    i,
+    v,
+    gg,
+    c
 ):
     """Modify defaults within the .env file"""
     # Open the .env file for content modification
     with open('../env.txt', 'w') as e:
         # Write each value to the .env file
-        e.write(f"NAME={name}\n")
-        e.write(f"BRK={brk}\n")
-        e.write(f"FASTFAIL={fastfail}\n")
-        e.write(f"INDENT={indent}\n")
-        e.write(f"VERSION={version}\n")
-        e.write(f"GGRADLEVERSION={ggradleversion}\n")
-        e.write(f"COMMITS={commits}")
+        e.write(f"NAME={n}\n")
+        e.write(f"BRK={b}\n")
+        e.write(f"FASTFAIL={ff}\n")
+        e.write(f"INDENT={i}\n")
+        e.write(f"VERSION={v}\n")
+        e.write(f"GGRADLEVERSION={gg}\n")
+        e.write(f"COMMITS={c}")
         e.flush()
 
 def main(arg: Optional[str] = typer.Argument(None)):
