@@ -2,9 +2,9 @@
 
 import typer
 from typer.testing import CliRunner
-from main import main
+from main import app
 
-app = typer.Typer()
+#app = typer.Typer()
 #app.command()(main)
 
 runner = CliRunner()
