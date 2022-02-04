@@ -81,7 +81,7 @@ with ConfiGator.
 
 ### Contributors
 
-- [@connellyw](https://github.com/connellyw)
+- ["@connellyw"](https://github.com/connellyw)
 - [@donizk](https://github.com/donizk)
 - [@Kevin487](https://github.com/Kevin487)
 - [@Peter-Snipes](https://github.com/Peter-Snipes)
