@@ -34,7 +34,7 @@ def test_indent_option_updates_indentation(mocker):
     """This module tests if the indentation is able to be changed"""
     mock_open = mocker.mock_open()
     mocker.patch('builtins.open', mock_open)
-    result = runner.invoke(app, ["--ind", "1"])
+    result = runner.invoke(app, ["--indent", "1"])
     assert "indent: 1" in mock_open().write.call_args_list[0].args[0]
     assert result.exit_code == 0
 
@@ -42,7 +42,7 @@ def test_vers_option_updates_version(mocker):
     """This module tests if the version is able to be updated"""
     mock_open = mocker.mock_open()
     mocker.patch('builtins.open', mock_open)
-    result = runner.invoke(app, ["--vers", "v2.1.0"])
+    result = runner.invoke(app, ["--version", "v2.1.0"])
     assert "version: v2.1.0" in mock_open().write.call_args_list[0].args[0]
     assert result.exit_code == 0
 

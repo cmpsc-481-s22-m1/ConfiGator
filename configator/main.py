@@ -15,8 +15,8 @@ def main(
     name: str = typer.Option("configator-generated"),
     brk: str = typer.Option("true"),
     fastfail: str = typer.Option("false"),
-    ind: int = typer.Option(2),
-    vers: str = typer.Option("master"),
+    indent: int = typer.Option(2),
+    version: str = typer.Option("master"),
     ggradleversion: str = typer.Option("0.5.1"),
 ):
 
@@ -26,10 +26,9 @@ def main(
     typer.echo(f"\nGenerating assignment as: {name}\n")
 
     # Progress bar to measure progress of necessary program functions
-    total = 99
     try:
-        with typer.progressbar(length=total) as progress:
-            create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, ind, vers)
+        with typer.progressbar(length=99) as progress:
+            create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, indent, version)
             progress.update(33)
             generate_build_gradle.create_gradlebuild(ggradleversion)
             progress.update(33)
@@ -38,7 +37,8 @@ def main(
         # Success confirmation message
         typer.secho("\nAssignment generation success!", fg = typer.colors.GREEN)
     except: # pylint: disable=bare-except
-        typer.secho("\nAn error occurred in assignment generation...", fg = typer.colors.RED)
+        typer.secho("\nAn error occurred in assignment generation...", fg = typer.colors.RED,
+        err = True)
 
 if __name__ == '__main__':
     app()
