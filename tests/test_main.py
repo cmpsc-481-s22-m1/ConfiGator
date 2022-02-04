@@ -53,11 +53,3 @@ def test_ggradleversion_option_changes_version(mocker):
     result = runner.invoke(app, ["--ggradleversion", "0.6.0"])
     assert "0.6.0" in mock_open().write.call_args_list[1].args[0]
     assert result.exit_code == 0
-
-def test_com_option_updates_commits(mocker):
-    """This module tests if the commits number is able to be changed"""
-    mock_open = mocker.mock_open()
-    mocker.patch('builtins.open', mock_open)
-    result = runner.invoke(app, ["--com", "4"])
-    assert "commits: 4" in mock_open().write.call_args_list[0].args[0]
-    assert result.exit_code == 0

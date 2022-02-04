@@ -15,9 +15,8 @@ def main(
     brk: str = typer.Option("true"),
     fastfail: str = typer.Option("false"),
     ind: int = typer.Option(2),
-    vers: str = typer.Option("v1.1.0"),
+    vers: str = typer.Option("master"),
     ggradleversion: str = typer.Option("0.5.1"),
-    com: int = typer.Option(3)
 ):
     # Alert user of assignment generation under specified name
     typer.echo(f"\nGenerating assignment as: {name}\n")
@@ -26,7 +25,7 @@ def main(
         for value in progress:
             # Fake processing time
             time.sleep(0.01)
-    create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, ind, vers, com)
+    create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, ind, vers)
     generate_build_gradle.create_gradlebuild(ggradleversion)
     create_actions_config.create_configator_file()
     # Success confirmation message
