@@ -13,7 +13,8 @@
         "virtualenvs",
         "git",
         "gitignore",
-        "github"
+        "github",
+        "configator"
     ],
     "ignorePaths": [
         ".github/**",
