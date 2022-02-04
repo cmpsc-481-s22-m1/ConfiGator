@@ -1,7 +1,5 @@
 """This file will use all of our functions and run the program"""
 
-import typer
-
 # Import from configator
 from configator import create_actions_config
 from configator import create_gatorgradle_yml
