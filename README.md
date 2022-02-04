@@ -76,7 +76,8 @@ poetry run task test
 
 ### If you need Assistance
 
-Create an issue or a discussion post for assistance if you encounter any issues with ConfiGator.
+Create an issue or a discussion post for assistance if you encounter any issues 
+with ConfiGator.
 
 ### Contributors 
 
