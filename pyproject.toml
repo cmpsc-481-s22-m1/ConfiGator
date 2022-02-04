@@ -9,7 +9,7 @@ packages = [
 ]
 
 [tool.poetry.scripts]
-poetry = 'configator.main:app'
+configator = 'configator.main:app'
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
