@@ -21,14 +21,15 @@ def main(
 ):
     # Alert user of assignment generation under specified name
     typer.echo(f"\nGenerating assignment as: {name}\n")
-    # Progress bar for visual appeal
-    with typer.progressbar(range(100)) as progress:
-        for value in progress:
-            # Fake processing time
-            time.sleep(0.01)
-    create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, ind, vers, com)
-    generate_build_gradle.create_gradlebuild(ggradleversion)
-    create_actions_config.create_configator_file()
+    # Progress bar to measure progress of necessary program functions
+    total = 99
+    with typer.progressbar(length=total) as progress:
+        create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, ind, vers, com)
+        progress.update(33)
+        generate_build_gradle.create_gradlebuild(ggradleversion)
+        progress.update(33)
+        create_actions_config.create_configator_file()
+        progress.update(33)
     # Success confirmation message
     typer.secho(f"\nAssignment generation success!", fg = typer.colors.GREEN)
 
