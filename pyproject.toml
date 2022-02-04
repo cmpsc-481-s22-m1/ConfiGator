@@ -4,6 +4,12 @@ version = "0.1.0"
 description = "A Configuration File Generator for GatorGradle"
 authors = ["Kyrie Doniz", "Kevin Lee", "Kai'lani Woodard", "Liam Connelly", "Adam Shinomiya", "Peter Snipes"]
 license = "MIT"
+packages = [
+    { include = "configator" }
+]
+
+[tool.poetry.scripts]
+poetry = 'configator.main:app'
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
