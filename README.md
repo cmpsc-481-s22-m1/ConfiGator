@@ -76,15 +76,18 @@ poetry run task test
 
 ### If you need Assistance 
 
+
 Create an issue or a discussion post for assistance if you 
 encounter any issues with ConfiGator.
 
+
 ### Contributors 
+
 
 - [@connellyw](https://github.com/connellyw)
 - [@donizk](https://github.com/donizk)
 - [@Kevin487](https://github.com/Kevin487)
-- [@Peter-Snipes]https://github.com/Peter-Snipes
+- [@Peter-Snipes](https://github.com/Peter-Snipes)
 - [@kailaniwoodard](https://github.com/kailaniwoodard)
 - [@mariakimheinert](https://github.com/mariakimheinert)
 - [@Michionlion](https://github.com/Michionlion)
