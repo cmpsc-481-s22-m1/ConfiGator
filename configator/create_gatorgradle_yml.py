@@ -4,7 +4,7 @@
 import os
 
 #pylint: disable=too-many-arguments
-def create_gatorgrader(name, brk, fastfail, ind, vers, com):
+def create_gatorgrader(name, brk, fastfail, ind, vers):
     """creating directory that can have files
     that can be read and written to.
     """
@@ -28,8 +28,6 @@ fastfail: {fastfail}
 indent: {ind}
 # What version of GatorGrader should this assignment use?
 version: {vers}
-# Minimum commit requirement?
-commits: {com}
 ---
 """
     with open("config/gatorgrader.yml", "w", encoding="utf8") as generate:
