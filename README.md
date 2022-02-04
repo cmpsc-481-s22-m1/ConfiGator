@@ -14,24 +14,12 @@ files for assignments that require GatorGradle. ConfiGator uses
 
 ## Usage
 
-### Installing Python Dependencies
+### Installing ConfiGator
 
-In order to install the dependencies of this project, run this command in your
-command line:
-
-```bash
-poetry install
-```
+Command to install ConfiGator
 
 ```bash
-poetry install typer
-```
-
-After installing the dependencies, navigate to the repository directory, and run
-the following in your command line:
-
-```bash
-poetry run python main.py
+pipx install configator
 ```
 
 ### Commands to Change Specific Information Within a File
@@ -39,43 +27,43 @@ poetry run python main.py
 Command to change name
 
 ```bash
-poetry run python main.py --name {your name}
+ configator --name {your name}
 ```
 
 Command to change break format
 
 ```bash
-poetry run python main.py --brk {false}
+configator --brk {false}
 ```
 
 Command to change fast fail
 
 ```bash
-poetry run python main.py --ff {true}
+configator --ff {true}
 ```
 
 Command to change indentation
 
 ```bash
-poetry run python main.py --ind {desired int}
+configator --ind {desired int}
 ```
 
 Command to change GatorGrader version
 
 ```bash
-poetry run python main.py --vers {desired version}
+configator --vers {desired version}
 ```
 
 Command to change GatorGradle
 
 ```bash
-poetry run python main.py --ggradleversion {desired version}
+configator --ggradleversion {desired version}
 ```
 
 Command to change commit requirements
 
 ```bash
-poetry run python main.py --com {desired int}
+configator --com {desired int}
 ```
 
 ### Testing Program
@@ -85,3 +73,18 @@ Command to test the coverage
 ```bash
 poetry run task test
 ```
+
+### If you need Assistance
+
+Create an issue or a discussion post for assistance if you encounter any issues
+with ConfiGator.
+
+### Contributors
+
+- [@connellyw](https://github.com/connellyw)
+- [@donizk](https://github.com/donizk)
+- [@Kevin487](https://github.com/Kevin487)
+- [@Peter-Snipes](https://github.com/Peter-Snipes)
+- [@kailaniwoodard](https://github.com/kailaniwoodard)
+- [@mariakimheinert](https://github.com/mariakimheinert)
+- [@Michionlion](https://github.com/Michionlion)
