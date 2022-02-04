@@ -16,6 +16,7 @@
         "github",
         "configator",
         "PyConfiGator",
+        "gatorgrader",
         "ggradleversion",
         "typer",
         "fastfail",
