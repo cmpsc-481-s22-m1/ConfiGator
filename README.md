@@ -75,15 +75,10 @@ poetry run task test
 ```
 
 ### If you need Assistance 
-
-
 Create an issue or a discussion post for assistance if you 
 encounter any issues with ConfiGator.
 
-
-### Contributors 
-
-
+### Contributors s
 - [@connellyw](https://github.com/connellyw)
 - [@donizk](https://github.com/donizk)
 - [@Kevin487](https://github.com/Kevin487)
