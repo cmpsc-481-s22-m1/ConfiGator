@@ -27,44 +27,14 @@ pipx install configator
 Command to change name
 
 ```bash
- configator --name {your name}
+configator --help
 ```
 
-Command to change break format
-
-```bash
-configator --brk {false}
-```
-
-Command to change fast fail
-
-```bash
-configator --ff {true}
-```
-
-Command to change indentation
-
-```bash
-configator --ind {desired int}
-```
-
-Command to change GatorGrader version
-
-```bash
-configator --vers {desired version}
-```
-
-Command to change GatorGradle
-
-```bash
-configator --ggradleversion {desired version}
-```
-
-Command to change commit requirements
-
-```bash
-configator --com {desired int}
-```
+This command will show a list of every available command to change specific information
+within a file of your choice. The list will include commands to change the name of the
+assignment, change if gradle run breaks if there is a check failure, change if gradle
+run should immediately break upon a check failure through fastfail, change the indentation
+the body of the file should use, and the GatorGrader version of the assignment.
 
 ### Testing Program
 
