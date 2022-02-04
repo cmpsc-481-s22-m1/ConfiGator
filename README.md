@@ -26,7 +26,7 @@ pipx install configator
 
 The command below will show a list of every available command to change
 specific configurations in `config/gatorgrader.yml`, or `build.gradle`
-within a file of your choice. 
+within a file of your choice.
 
 ```bash
 configator --help
