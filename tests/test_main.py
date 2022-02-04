@@ -1,7 +1,7 @@
 """This module tests the main file"""
 
 from typer.testing import CliRunner
-from main import app
+from configator.main import app
 
 runner = CliRunner()
 
