@@ -25,7 +25,7 @@ def main(
     total = 99
     try:
         with typer.progressbar(length=total) as progress:
-            create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, ind, vers, com)
+            create_gatorgradle_yml.create_gatorgrader(name, brk, fastfail, ind, vers)
             progress.update(33)
             generate_build_gradle.create_gradlebuild(ggradleversion)
             progress.update(33)
@@ -35,6 +35,7 @@ def main(
         typer.secho(f"\nAssignment generation success!", fg = typer.colors.GREEN)
     except:
         typer.secho(f"\nAn error occurred in assignment generation...", fg = typer.colors.RED)
+        
 
 if __name__ == '__main__':
     app()
