@@ -15,12 +15,12 @@ def main(
     brk: str = typer.Option("true"),
     fastfail: str = typer.Option("false"),
     ind: int = typer.Option(2),
-    vers: str = typer.Option("v1.1.0"),
+    vers: str = typer.Option("master"),
     ggradleversion: str = typer.Option("0.5.1"),
-    com: int = typer.Option(3)
 ):
     # Alert user of assignment generation under specified name
     typer.echo(f"\nGenerating assignment as: {name}\n")
+
     # Progress bar to measure progress of necessary program functions
     total = 99
     try:
@@ -35,7 +35,6 @@ def main(
         typer.secho(f"\nAssignment generation success!", fg = typer.colors.GREEN)
     except:
         typer.secho(f"\nAn error occurred in assignment generation...", fg = typer.colors.RED)
-
 
 if __name__ == '__main__':
     app()
