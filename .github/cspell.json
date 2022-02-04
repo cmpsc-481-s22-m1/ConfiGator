@@ -15,6 +15,7 @@
         "gitignore",
         "github",
         "configator",
+        "PyConfiGator",
         "ggradleversion",
         "typer",
         "fastfail",

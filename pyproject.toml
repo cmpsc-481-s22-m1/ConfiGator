@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ConfiGator"
+name = "PyConfiGator"
 version = "0.1.0"
 description = "A Configuration File Generator for GatorGradle"
 authors = ["Kyrie Doniz", "Kevin Lee", "Kai'lani Woodard", "Liam Connelly", "Adam Shinomiya", "Peter Snipes"]
