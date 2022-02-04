@@ -22,27 +22,14 @@ Command to install ConfiGator
 pipx install configator
 ```
 
-### Commands to Change Specific Information Within a File
+### Command to Change Specific Configurations
 
-Command to change name
+The command below will show a list of every available command to change
+specific configurations in `config/gatorgrader.yml`, or `build.gradle`
+within a file of your choice.
 
 ```bash
 configator --help
-```
-
-This command will show a list of every available command to change specific information
-within a file of your choice. The list will include commands to change the
-name of the assignment, change if gradle run breaks if there is a check failure,
-change if gradle run should immediately break upon a check failure through fastfail,
-change the indentation the body of the file should use, and the GatorGrader version
-of the assignment.
-
-### Testing Program
-
-Command to test the coverage
-
-```bash
-poetry run task test
 ```
 
 ### If you need Assistance
