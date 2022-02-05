@@ -14,18 +14,34 @@ files for assignments that require GatorGradle. ConfiGator uses
 
 ## Usage
 
-### Installing Python dependencies
+### Installing ConfiGator
 
-In order to install the dependencies of this project, run this command in your
-command line:
-
-```bash
-poetry install
-```
-
-After installing the dependencies, navigate to the repository directory, and run
-the following in your command line:
+Command to install ConfiGator
 
 ```bash
-poetry run python main.py
+pipx install configator
 ```
+
+### Command to Change Specific Configurations
+
+The command below will show a list of every available command to change
+specific configurations in `config/gatorgrader.yml` or `build.gradle`.
+
+```bash
+configator --help
+```
+
+### If you need Assistance
+
+Create an issue or a discussion post for assistance if you encounter any issues
+with ConfiGator.
+
+### Contributors
+
+- [@connellyw](https://github.com/connellyw)
+- [@donizk](https://github.com/donizk)
+- [@Kevin487](https://github.com/Kevin487)
+- [@Peter-Snipes](https://github.com/Peter-Snipes)
+- [@kailaniwoodard](https://github.com/kailaniwoodard)
+- [@mariakimheinert](https://github.com/mariakimheinert)
+- [@Michionlion](https://github.com/Michionlion)
