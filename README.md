@@ -25,8 +25,7 @@ pipx install configator
 ### Command to Change Specific Configurations
 
 The command below will show a list of every available command to change
-specific configurations in `config/gatorgrader.yml`, or `build.gradle`
-within a file of your choice.
+specific configurations in `config/gatorgrader.yml` or `build.gradle`.
 
 ```bash
 configator --help
