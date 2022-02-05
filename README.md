@@ -43,5 +43,6 @@ with ConfiGator.
 - [@Kevin487](https://github.com/Kevin487)
 - [@Peter-Snipes](https://github.com/Peter-Snipes)
 - [@kailaniwoodard](https://github.com/kailaniwoodard)
+- [@TheShiny1](https://github.com/TheShiny1)
 - [@mariakimheinert](https://github.com/mariakimheinert)
 - [@Michionlion](https://github.com/Michionlion)
