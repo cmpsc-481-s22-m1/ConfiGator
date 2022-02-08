@@ -14,7 +14,20 @@
         "git",
         "gitignore",
         "github",
-        "configator"
+        "configator",
+        "PyConfiGator",
+        "gatorgrader",
+        "ggradleversion",
+        "typer",
+        "fastfail",
+        "connellyw",
+        "donizk",
+        "Kevin487",
+        "Peter-Snipes",
+        "kailaniwoodard",
+        "mariakimheinert",
+        "Michionlion"
+
     ],
     "ignorePaths": [
         ".github/**",

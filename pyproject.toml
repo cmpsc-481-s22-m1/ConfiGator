@@ -1,12 +1,20 @@
 [tool.poetry]
-name = "ConfiGator"
-version = "0.1.0"
+name = "PyConfiGator"
+version = "1.0.2"
 description = "A Configuration File Generator for GatorGradle"
 authors = ["Kyrie Doniz", "Kevin Lee", "Kai'lani Woodard", "Liam Connelly", "Adam Shinomiya", "Peter Snipes"]
+readme = "README.md"
 license = "MIT"
+packages = [
+    { include = "configator" }
+]
+
+[tool.poetry.scripts]
+configator = 'configator.main:app'
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
+typer = "^0.4.0"
 
 [tool.poetry.dev-dependencies]
 taskipy = "^1.9.0"
