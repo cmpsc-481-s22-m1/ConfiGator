@@ -2,6 +2,8 @@
 
 ![Mr.ConfiGator himself](img/icon.png)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 [![Lint and Test](https://github.com/cmpsc-481-s22-m1/ConfiGator/actions/workflows/main.yml/badge.svg?branch=release%2F0.1.0)](https://github.com/cmpsc-481-s22-m1/ConfiGator/actions/workflows/main.yml)
 
 A configuration file generator meant to be used with [GatorGradle](https://github.com/GatorEducator/gatorgradle).
@@ -48,11 +50,11 @@ with ConfiGator.
 
 ### Contributors
 
-* [@connellyw](https://github.com/connellyw)
-* [@donizk](https://github.com/donizk)
-* [@Kevin487](https://github.com/Kevin487)
-* [@Peter-Snipes](https://github.com/Peter-Snipes)
-* [@kailaniwoodard](https://github.com/kailaniwoodard)
-* [@TheShiny1](https://github.com/TheShiny1)
-* [@mariakimheinert](https://github.com/mariakimheinert)
-* [@Michionlion](https://github.com/Michionlion)
+* William Connelly, [@connellyw](https://github.com/connellyw)
+* Kyrie Doniz, [@donizk](https://github.com/donizk)
+* Kevin Lee, [@Kevin487](https://github.com/Kevin487)
+* Peter Snipes, [@Peter-Snipes](https://github.com/Peter-Snipes)
+* Kai'lani Woodard, [@kailaniwoodard](https://github.com/kailaniwoodard)
+* Adam Shinomiya, [@TheShiny1](https://github.com/TheShiny1)
+* Maria Kim Heinert, [@mariakimheinert](https://github.com/mariakimheinert)
+* Saejin Heinert, [@Michionlion](https://github.com/Michionlion)
