@@ -19,7 +19,17 @@ files for assignments that require GatorGradle. ConfiGator uses
 Command to install ConfiGator
 
 ```bash
-pipx install configator
+pipx install pyconfigator
+```
+
+* *if* `pipx` *does not work, use* `pip` *instead.*
+
+### Running ConfiGator
+
+Command to run ConfiGator (after installing using `pip` or `pipx`)
+
+```bash
+configator
 ```
 
 ### Command to Change Specific Configurations
