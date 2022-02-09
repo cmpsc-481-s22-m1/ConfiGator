@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PyConfiGator"
-version = "1.0.2"
+version = "1.0.3"
 description = "A Configuration File Generator for GatorGradle"
 authors = ["Kyrie Doniz", "Kevin Lee", "Kai'lani Woodard", "Liam Connelly", "Adam Shinomiya", "Peter Snipes"]
 readme = "README.md"
